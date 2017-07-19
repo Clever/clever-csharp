@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DistrictsResponse
+# Clever.Model.DistrictsResponse
 ## Properties
 
 Name | Type | Description | Notes

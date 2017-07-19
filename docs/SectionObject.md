@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SectionObject
+# Clever.Model.SectionObject
 ## Properties
 
 Name | Type | Description | Notes

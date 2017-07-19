@@ -1,4 +1,4 @@
-# IO.Swagger.Model.EventResponse
+# Clever.Model.EventResponse
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StudentsDeleted
+# Clever.Model.StudentsDeleted
 ## Properties
 
 Name | Type | Description | Notes

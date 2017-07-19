@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ModelEvent
+# Clever.Model.ModelEvent
 ## Properties
 
 Name | Type | Description | Notes

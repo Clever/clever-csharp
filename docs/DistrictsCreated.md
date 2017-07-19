@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DistrictsCreated
+# Clever.Model.DistrictsCreated
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.InternalError
+# Clever.Model.InternalError
 ## Properties
 
 Name | Type | Description | Notes

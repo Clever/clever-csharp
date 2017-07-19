@@ -1,4 +1,4 @@
-# IO.Swagger.Api.EventsApi
+# Clever.Api.EventsApi
 
 All URIs are relative to *https://api.clever.com/v1.2*
 
@@ -25,9 +25,9 @@ Returns the specific event
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -88,9 +88,9 @@ Returns a list of events
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -155,9 +155,9 @@ Returns a list of events for a school
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -224,9 +224,9 @@ Returns a list of events for a school admin
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -293,9 +293,9 @@ Returns a list of events for a section
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -362,9 +362,9 @@ Returns a list of events for a student
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -431,9 +431,9 @@ Returns a list of events for a teacher
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {

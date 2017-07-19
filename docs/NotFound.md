@@ -1,4 +1,4 @@
-# IO.Swagger.Model.NotFound
+# Clever.Model.NotFound
 ## Properties
 
 Name | Type | Description | Notes

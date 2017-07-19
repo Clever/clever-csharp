@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BadRequest
+# Clever.Model.BadRequest
 ## Properties
 
 Name | Type | Description | Notes

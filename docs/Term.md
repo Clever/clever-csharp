@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Term
+# Clever.Model.Term
 ## Properties
 
 Name | Type | Description | Notes

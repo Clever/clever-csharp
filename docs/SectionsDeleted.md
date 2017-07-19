@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SectionsDeleted
+# Clever.Model.SectionsDeleted
 ## Properties
 
 Name | Type | Description | Notes

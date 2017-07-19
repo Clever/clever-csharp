@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TeacherResponse
+# Clever.Model.TeacherResponse
 ## Properties
 
 Name | Type | Description | Notes

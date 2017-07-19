@@ -1,4 +1,4 @@
-# IO.Swagger.Api.DataApi
+# Clever.Api.DataApi
 
 All URIs are relative to *https://api.clever.com/v1.2*
 
@@ -57,9 +57,9 @@ Returns a specific student contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -120,9 +120,9 @@ Returns a list of student contacts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -187,9 +187,9 @@ Returns the contacts for a student
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -252,9 +252,9 @@ Returns a specific district
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -315,9 +315,9 @@ Returns a specific district admin
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -378,9 +378,9 @@ Returns a list of district admins
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -443,9 +443,9 @@ Returns the district for a school
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -506,9 +506,9 @@ Returns the district for a section
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -569,9 +569,9 @@ Returns the district for a student
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -632,9 +632,9 @@ Returns the district for a student contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -695,9 +695,9 @@ Returns the district for a teacher
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -758,9 +758,9 @@ Returns the status of the district
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -821,9 +821,9 @@ Returns a list of districts
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -880,9 +880,9 @@ Returns the grade levels for sections a teacher teaches
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -943,9 +943,9 @@ Returns a specific school
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1006,9 +1006,9 @@ Returns a specific school admin
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1069,9 +1069,9 @@ Returns a list of school admins
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1136,9 +1136,9 @@ Returns the school for a section
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1199,9 +1199,9 @@ Returns the primary school for a student
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1262,9 +1262,9 @@ Retrieves school info for a teacher.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1325,9 +1325,9 @@ Returns a list of schools
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1392,9 +1392,9 @@ Returns the schools for a school admin
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1461,9 +1461,9 @@ Returns a specific section
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1524,9 +1524,9 @@ Returns a list of sections
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1591,9 +1591,9 @@ Returns the sections for a school
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1660,9 +1660,9 @@ Returns the sections for a student
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1729,9 +1729,9 @@ Returns the sections for a teacher
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1798,9 +1798,9 @@ Returns a specific student
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1861,9 +1861,9 @@ Returns the student for a student contact
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1924,9 +1924,9 @@ Returns a list of students
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -1991,9 +1991,9 @@ Returns the students for a school
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2060,9 +2060,9 @@ Returns the students for a section
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2129,9 +2129,9 @@ Returns the students for a teacher
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2198,9 +2198,9 @@ Returns a specific teacher
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2261,9 +2261,9 @@ Returns the primary teacher for a section
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2324,9 +2324,9 @@ Returns a list of teachers
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2391,9 +2391,9 @@ Returns the teachers for a school
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2460,9 +2460,9 @@ Returns the teachers for a section
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {
@@ -2529,9 +2529,9 @@ Returns the teachers for a student
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
 
 namespace Example
 {

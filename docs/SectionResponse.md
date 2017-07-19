@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SectionResponse
+# Clever.Model.SectionResponse
 ## Properties
 
 Name | Type | Description | Notes

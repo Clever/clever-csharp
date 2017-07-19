@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Credentials
+# Clever.Model.Credentials
 ## Properties
 
 Name | Type | Description | Notes

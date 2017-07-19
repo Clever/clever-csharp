@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SchoolObject
+# Clever.Model.SchoolObject
 ## Properties
 
 Name | Type | Description | Notes

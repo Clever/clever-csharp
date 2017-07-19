@@ -1,4 +1,4 @@
-# IO.Swagger.Model.GradeLevelsResponse
+# Clever.Model.GradeLevelsResponse
 ## Properties
 
 Name | Type | Description | Notes

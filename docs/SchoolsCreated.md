@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SchoolsCreated
+# Clever.Model.SchoolsCreated
 ## Properties
 
 Name | Type | Description | Notes

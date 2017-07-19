@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SectionsUpdated
+# Clever.Model.SectionsUpdated
 ## Properties
 
 Name | Type | Description | Notes
