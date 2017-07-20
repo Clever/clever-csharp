@@ -7,7 +7,7 @@ test:
 	echo "TODO test app"
 
 build:
-	git grep -l 'IO.Swagger' -- './*' ':(exclude)Makefile' | xargs -I sed 's/IO.Swagger/Clever/g'
+	git grep -l 'IO.Swagger' -- './*' ':(exclude)Makefile' | xargs sed -i "" 's/IO.Swagger/Clever/g'
 	mv IO.Swagger.sln Clever.sln || true
 	mv src/IO.Swagger src/Clever || true
 	mv src/Clever/IO.Swagger.csproj src/Clever/Clever.csproj || true

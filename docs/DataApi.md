@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontactsforstudent"></a>
 # **GetContactsForStudent**
-> StudentContactsByStudentResponse GetContactsForStudent (string id, int? limit = null)
+> StudentContactsForStudentResponse GetContactsForStudent (string id, int? limit = null)
 
 
 
@@ -206,7 +206,7 @@ namespace Example
 
             try
             {
-                StudentContactsByStudentResponse result = apiInstance.GetContactsForStudent(id, limit);
+                StudentContactsForStudentResponse result = apiInstance.GetContactsForStudent(id, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StudentContactsByStudentResponse**](StudentContactsByStudentResponse.md)
+[**StudentContactsForStudentResponse**](StudentContactsForStudentResponse.md)
 
 ### Authorization
 

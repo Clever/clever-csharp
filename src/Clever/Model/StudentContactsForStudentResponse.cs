@@ -25,16 +25,16 @@ using SwaggerDateConverter = Clever.Client.SwaggerDateConverter;
 namespace Clever.Model
 {
     /// <summary>
-    /// StudentContactsByStudentResponse
+    /// StudentContactsForStudentResponse
     /// </summary>
     [DataContract]
-    public partial class StudentContactsByStudentResponse :  IEquatable<StudentContactsByStudentResponse>, IValidatableObject
+    public partial class StudentContactsForStudentResponse :  IEquatable<StudentContactsForStudentResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StudentContactsByStudentResponse" /> class.
+        /// Initializes a new instance of the <see cref="StudentContactsForStudentResponse" /> class.
         /// </summary>
         /// <param name="Data">Data.</param>
-        public StudentContactsByStudentResponse(List<StudentContact> Data = default(List<StudentContact>))
+        public StudentContactsForStudentResponse(List<StudentContact> Data = default(List<StudentContact>))
         {
             this.Data = Data;
         }
@@ -52,7 +52,7 @@ namespace Clever.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StudentContactsByStudentResponse {\n");
+            sb.Append("class StudentContactsForStudentResponse {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -75,15 +75,15 @@ namespace Clever.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StudentContactsByStudentResponse);
+            return this.Equals(obj as StudentContactsForStudentResponse);
         }
 
         /// <summary>
-        /// Returns true if StudentContactsByStudentResponse instances are equal
+        /// Returns true if StudentContactsForStudentResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of StudentContactsByStudentResponse to be compared</param>
+        /// <param name="other">Instance of StudentContactsForStudentResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StudentContactsByStudentResponse other)
+        public bool Equals(StudentContactsForStudentResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

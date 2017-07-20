@@ -184,7 +184,7 @@ Class | Method | HTTP request | Description
  - [Model.StudentContact](docs/StudentContact.md)
  - [Model.StudentContactObject](docs/StudentContactObject.md)
  - [Model.StudentContactResponse](docs/StudentContactResponse.md)
- - [Model.StudentContactsByStudentResponse](docs/StudentContactsByStudentResponse.md)
+ - [Model.StudentContactsForStudentResponse](docs/StudentContactsForStudentResponse.md)
  - [Model.StudentContactsResponse](docs/StudentContactsResponse.md)
  - [Model.StudentObject](docs/StudentObject.md)
  - [Model.StudentResponse](docs/StudentResponse.md)

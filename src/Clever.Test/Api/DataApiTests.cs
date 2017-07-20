@@ -100,7 +100,7 @@ namespace Clever.Test
             //string id = null;
             //int? limit = null;
             //var response = instance.GetContactsForStudent(id, limit);
-            //Assert.IsInstanceOf<StudentContactsByStudentResponse> (response, "response is StudentContactsByStudentResponse");
+            //Assert.IsInstanceOf<StudentContactsForStudentResponse> (response, "response is StudentContactsForStudentResponse");
         }
         
         /// <summary>

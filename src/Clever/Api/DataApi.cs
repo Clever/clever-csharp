@@ -79,8 +79,8 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>StudentContactsByStudentResponse</returns>
-        StudentContactsByStudentResponse GetContactsForStudent (string id, int? limit = null);
+        /// <returns>StudentContactsForStudentResponse</returns>
+        StudentContactsForStudentResponse GetContactsForStudent (string id, int? limit = null);
 
         /// <summary>
         /// 
@@ -91,8 +91,8 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>ApiResponse of StudentContactsByStudentResponse</returns>
-        ApiResponse<StudentContactsByStudentResponse> GetContactsForStudentWithHttpInfo (string id, int? limit = null);
+        /// <returns>ApiResponse of StudentContactsForStudentResponse</returns>
+        ApiResponse<StudentContactsForStudentResponse> GetContactsForStudentWithHttpInfo (string id, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -986,8 +986,8 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>Task of StudentContactsByStudentResponse</returns>
-        System.Threading.Tasks.Task<StudentContactsByStudentResponse> GetContactsForStudentAsync (string id, int? limit = null);
+        /// <returns>Task of StudentContactsForStudentResponse</returns>
+        System.Threading.Tasks.Task<StudentContactsForStudentResponse> GetContactsForStudentAsync (string id, int? limit = null);
 
         /// <summary>
         /// 
@@ -998,8 +998,8 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>Task of ApiResponse (StudentContactsByStudentResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StudentContactsByStudentResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null);
+        /// <returns>Task of ApiResponse (StudentContactsForStudentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<StudentContactsForStudentResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2250,10 +2250,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>StudentContactsByStudentResponse</returns>
-        public StudentContactsByStudentResponse GetContactsForStudent (string id, int? limit = null)
+        /// <returns>StudentContactsForStudentResponse</returns>
+        public StudentContactsForStudentResponse GetContactsForStudent (string id, int? limit = null)
         {
-             ApiResponse<StudentContactsByStudentResponse> localVarResponse = GetContactsForStudentWithHttpInfo(id, limit);
+             ApiResponse<StudentContactsForStudentResponse> localVarResponse = GetContactsForStudentWithHttpInfo(id, limit);
              return localVarResponse.Data;
         }
 
@@ -2263,8 +2263,8 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>ApiResponse of StudentContactsByStudentResponse</returns>
-        public ApiResponse< StudentContactsByStudentResponse > GetContactsForStudentWithHttpInfo (string id, int? limit = null)
+        /// <returns>ApiResponse of StudentContactsForStudentResponse</returns>
+        public ApiResponse< StudentContactsForStudentResponse > GetContactsForStudentWithHttpInfo (string id, int? limit = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2314,9 +2314,9 @@ namespace Clever.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<StudentContactsByStudentResponse>(localVarStatusCode,
+            return new ApiResponse<StudentContactsForStudentResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StudentContactsByStudentResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StudentContactsByStudentResponse)));
+                (StudentContactsForStudentResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StudentContactsForStudentResponse)));
         }
 
         /// <summary>
@@ -2325,10 +2325,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>Task of StudentContactsByStudentResponse</returns>
-        public async System.Threading.Tasks.Task<StudentContactsByStudentResponse> GetContactsForStudentAsync (string id, int? limit = null)
+        /// <returns>Task of StudentContactsForStudentResponse</returns>
+        public async System.Threading.Tasks.Task<StudentContactsForStudentResponse> GetContactsForStudentAsync (string id, int? limit = null)
         {
-             ApiResponse<StudentContactsByStudentResponse> localVarResponse = await GetContactsForStudentAsyncWithHttpInfo(id, limit);
+             ApiResponse<StudentContactsForStudentResponse> localVarResponse = await GetContactsForStudentAsyncWithHttpInfo(id, limit);
              return localVarResponse.Data;
 
         }
@@ -2339,8 +2339,8 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
-        /// <returns>Task of ApiResponse (StudentContactsByStudentResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StudentContactsByStudentResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null)
+        /// <returns>Task of ApiResponse (StudentContactsForStudentResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<StudentContactsForStudentResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2390,9 +2390,9 @@ namespace Clever.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<StudentContactsByStudentResponse>(localVarStatusCode,
+            return new ApiResponse<StudentContactsForStudentResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StudentContactsByStudentResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StudentContactsByStudentResponse)));
+                (StudentContactsForStudentResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StudentContactsForStudentResponse)));
         }
 
         /// <summary>
