@@ -54,6 +54,7 @@ namespace Clever.Client
         {
             Configuration = Configuration.Default;
             RestClient = new RestClient("https://api.clever.com/v1.2");
+            serializerSettings.Converters.Add(new CleverEventJsonConverter());
         }
 
         /// <summary>
@@ -69,6 +70,7 @@ namespace Clever.Client
                 Configuration = config;
 
             RestClient = new RestClient("https://api.clever.com/v1.2");
+            serializerSettings.Converters.Add(new CleverEventJsonConverter());
         }
 
         /// <summary>
@@ -83,6 +85,7 @@ namespace Clever.Client
 
             RestClient = new RestClient(basePath);
             Configuration = Configuration.Default;
+            serializerSettings.Converters.Add(new CleverEventJsonConverter());
         }
 
         /// <summary>
