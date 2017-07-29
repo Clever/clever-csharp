@@ -15,6 +15,8 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
+*.exe
+*.dll
 
 # NuGet Packages
 *.nupkg
@@ -183,3 +185,7 @@ $RECYCLE.BIN/
 
 # Visual Studio 2014 CTP
 **/*.sln.ide
+
+# Swagger codegen files
+git_push.sh
+.swagger-codegen/
