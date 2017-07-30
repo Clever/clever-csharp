@@ -294,7 +294,7 @@ java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i
 ```
 4. [Install Mono](http://www.mono-project.com/docs/getting-started/install/)
 
-5. Run `make build` to copy over the override files
+5. Run `make override` to copy over the override files. This will interactively merge some files from master with those generated from swagger-codegen, so carefully check the changes.
 
 6. Update the version in `src/Clever/Properties/AssemblyInfo.cs` using semver
 

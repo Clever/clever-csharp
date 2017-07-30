@@ -12,7 +12,6 @@ git grep -l 'IO.Swagger' -- './*' ':(exclude)override/override.sh' | xargs sed -
 
 cp override/CleverEventJsonConverter.cs src/Clever/Client/
 
-#TODO: Change this to master before merging
 # Interactively merge these files
-git checkout --patch 9ecbbe9a51acbcd9291931f889dfd62a71a9a2a9 README.md
-git checkout --patch 9ecbbe9a51acbcd9291931f889dfd62a71a9a2a9 src/Clever/Client/ApiClient.cs
+git checkout --patch master README.md
+git checkout --patch master src/Clever/Client/ApiClient.cs
