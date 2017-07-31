@@ -46,7 +46,7 @@ namespace Clever.Client
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 100000,
-                             string userAgent = "Swagger-Codegen/1.0.0/csharp"
+                             string userAgent = "Swagger-Codegen/1.2.0/csharp"
                             )
         {
             setApiClientUsingDefault(apiClient);
@@ -81,7 +81,7 @@ namespace Clever.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.0.0";
+        public const string Version = "1.2.0";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -326,7 +326,7 @@ namespace Clever.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 1.2.0\n";
-            report += "    SDK Package Version: 1.0.0\n";
+            report += "    SDK Package Version: 1.2.0\n";
 
             return report;
         }

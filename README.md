@@ -290,12 +290,10 @@ Class | Method | HTTP request | Description
 
 3. In the root directory of the swagger repo run:
 ```
-java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v1.2-client.yml -l csharp -o $PATH_TO_THIS_REPO
+java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i $PATH_TO_SWAGGER_API_REPO/v$VERSION-client.yml -l csharp -o $PATH_TO_THIS_REPO --additional-properties packageVersion=$VERSION
 ```
 4. [Install Mono](http://www.mono-project.com/docs/getting-started/install/)
 
-5. Run `make override` to copy over the override files. This will interactively merge some files from master with those generated from swagger-codegen, so carefully check the changes.
+5. Run `make override` and follow the instructions.
 
-6. Update the version in `src/Clever/Properties/AssemblyInfo.cs` using semver
-
-7. After merging to master, don't forget to [package](#packaging) your changes and [publish](https://docs.microsoft.com/en-us/nuget/create-packages/publish-a-package) to NuGet. Credentials are in 1PFT.
+6. After merging to master, don't forget to [package](#packaging) your changes and [publish](https://docs.microsoft.com/en-us/nuget/create-packages/publish-a-package) to NuGet. Credentials are in 1PFT.
