@@ -45,52 +45,52 @@ All URIs are relative to *https://api.clever.com/v1.2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DataApi* | [**GetContact**](docs/DataApi.md#getcontact) | **GET** /contacts/{id} |
-*DataApi* | [**GetContacts**](docs/DataApi.md#getcontacts) | **GET** /contacts |
-*DataApi* | [**GetContactsForStudent**](docs/DataApi.md#getcontactsforstudent) | **GET** /students/{id}/contacts |
-*DataApi* | [**GetDistrict**](docs/DataApi.md#getdistrict) | **GET** /districts/{id} |
-*DataApi* | [**GetDistrictAdmin**](docs/DataApi.md#getdistrictadmin) | **GET** /district_admins/{id} |
-*DataApi* | [**GetDistrictAdmins**](docs/DataApi.md#getdistrictadmins) | **GET** /district_admins |
-*DataApi* | [**GetDistrictForSchool**](docs/DataApi.md#getdistrictforschool) | **GET** /schools/{id}/district |
-*DataApi* | [**GetDistrictForSection**](docs/DataApi.md#getdistrictforsection) | **GET** /sections/{id}/district |
-*DataApi* | [**GetDistrictForStudent**](docs/DataApi.md#getdistrictforstudent) | **GET** /students/{id}/district |
-*DataApi* | [**GetDistrictForStudentContact**](docs/DataApi.md#getdistrictforstudentcontact) | **GET** /contacts/{id}/district |
-*DataApi* | [**GetDistrictForTeacher**](docs/DataApi.md#getdistrictforteacher) | **GET** /teachers/{id}/district |
-*DataApi* | [**GetDistrictStatus**](docs/DataApi.md#getdistrictstatus) | **GET** /districts/{id}/status |
-*DataApi* | [**GetDistricts**](docs/DataApi.md#getdistricts) | **GET** /districts |
-*DataApi* | [**GetGradeLevelsForTeacher**](docs/DataApi.md#getgradelevelsforteacher) | **GET** /teachers/{id}/grade_levels |
-*DataApi* | [**GetSchool**](docs/DataApi.md#getschool) | **GET** /schools/{id} |
-*DataApi* | [**GetSchoolAdmin**](docs/DataApi.md#getschooladmin) | **GET** /school_admins/{id} |
-*DataApi* | [**GetSchoolAdmins**](docs/DataApi.md#getschooladmins) | **GET** /school_admins |
-*DataApi* | [**GetSchoolForSection**](docs/DataApi.md#getschoolforsection) | **GET** /sections/{id}/school |
-*DataApi* | [**GetSchoolForStudent**](docs/DataApi.md#getschoolforstudent) | **GET** /students/{id}/school |
-*DataApi* | [**GetSchoolForTeacher**](docs/DataApi.md#getschoolforteacher) | **GET** /teachers/{id}/school |
-*DataApi* | [**GetSchools**](docs/DataApi.md#getschools) | **GET** /schools |
-*DataApi* | [**GetSchoolsForSchoolAdmin**](docs/DataApi.md#getschoolsforschooladmin) | **GET** /school_admins/{id}/schools |
-*DataApi* | [**GetSection**](docs/DataApi.md#getsection) | **GET** /sections/{id} |
-*DataApi* | [**GetSections**](docs/DataApi.md#getsections) | **GET** /sections |
-*DataApi* | [**GetSectionsForSchool**](docs/DataApi.md#getsectionsforschool) | **GET** /schools/{id}/sections |
-*DataApi* | [**GetSectionsForStudent**](docs/DataApi.md#getsectionsforstudent) | **GET** /students/{id}/sections |
-*DataApi* | [**GetSectionsForTeacher**](docs/DataApi.md#getsectionsforteacher) | **GET** /teachers/{id}/sections |
-*DataApi* | [**GetStudent**](docs/DataApi.md#getstudent) | **GET** /students/{id} |
-*DataApi* | [**GetStudentForContact**](docs/DataApi.md#getstudentforcontact) | **GET** /contacts/{id}/student |
-*DataApi* | [**GetStudents**](docs/DataApi.md#getstudents) | **GET** /students |
-*DataApi* | [**GetStudentsForSchool**](docs/DataApi.md#getstudentsforschool) | **GET** /schools/{id}/students |
-*DataApi* | [**GetStudentsForSection**](docs/DataApi.md#getstudentsforsection) | **GET** /sections/{id}/students |
-*DataApi* | [**GetStudentsForTeacher**](docs/DataApi.md#getstudentsforteacher) | **GET** /teachers/{id}/students |
-*DataApi* | [**GetTeacher**](docs/DataApi.md#getteacher) | **GET** /teachers/{id} |
-*DataApi* | [**GetTeacherForSection**](docs/DataApi.md#getteacherforsection) | **GET** /sections/{id}/teacher |
-*DataApi* | [**GetTeachers**](docs/DataApi.md#getteachers) | **GET** /teachers |
-*DataApi* | [**GetTeachersForSchool**](docs/DataApi.md#getteachersforschool) | **GET** /schools/{id}/teachers |
-*DataApi* | [**GetTeachersForSection**](docs/DataApi.md#getteachersforsection) | **GET** /sections/{id}/teachers |
-*DataApi* | [**GetTeachersForStudent**](docs/DataApi.md#getteachersforstudent) | **GET** /students/{id}/teachers |
-*EventsApi* | [**GetEvent**](docs/EventsApi.md#getevent) | **GET** /events/{id} |
-*EventsApi* | [**GetEvents**](docs/EventsApi.md#getevents) | **GET** /events |
-*EventsApi* | [**GetEventsForSchool**](docs/EventsApi.md#geteventsforschool) | **GET** /schools/{id}/events |
-*EventsApi* | [**GetEventsForSchoolAdmin**](docs/EventsApi.md#geteventsforschooladmin) | **GET** /school_admins/{id}/events |
-*EventsApi* | [**GetEventsForSection**](docs/EventsApi.md#geteventsforsection) | **GET** /sections/{id}/events |
-*EventsApi* | [**GetEventsForStudent**](docs/EventsApi.md#geteventsforstudent) | **GET** /students/{id}/events |
-*EventsApi* | [**GetEventsForTeacher**](docs/EventsApi.md#geteventsforteacher) | **GET** /teachers/{id}/events |
+*DataApi* | [**GetContact**](docs/DataApi.md#getcontact) | **GET** /contacts/{id} | 
+*DataApi* | [**GetContacts**](docs/DataApi.md#getcontacts) | **GET** /contacts | 
+*DataApi* | [**GetContactsForStudent**](docs/DataApi.md#getcontactsforstudent) | **GET** /students/{id}/contacts | 
+*DataApi* | [**GetDistrict**](docs/DataApi.md#getdistrict) | **GET** /districts/{id} | 
+*DataApi* | [**GetDistrictAdmin**](docs/DataApi.md#getdistrictadmin) | **GET** /district_admins/{id} | 
+*DataApi* | [**GetDistrictAdmins**](docs/DataApi.md#getdistrictadmins) | **GET** /district_admins | 
+*DataApi* | [**GetDistrictForSchool**](docs/DataApi.md#getdistrictforschool) | **GET** /schools/{id}/district | 
+*DataApi* | [**GetDistrictForSection**](docs/DataApi.md#getdistrictforsection) | **GET** /sections/{id}/district | 
+*DataApi* | [**GetDistrictForStudent**](docs/DataApi.md#getdistrictforstudent) | **GET** /students/{id}/district | 
+*DataApi* | [**GetDistrictForStudentContact**](docs/DataApi.md#getdistrictforstudentcontact) | **GET** /contacts/{id}/district | 
+*DataApi* | [**GetDistrictForTeacher**](docs/DataApi.md#getdistrictforteacher) | **GET** /teachers/{id}/district | 
+*DataApi* | [**GetDistrictStatus**](docs/DataApi.md#getdistrictstatus) | **GET** /districts/{id}/status | 
+*DataApi* | [**GetDistricts**](docs/DataApi.md#getdistricts) | **GET** /districts | 
+*DataApi* | [**GetGradeLevelsForTeacher**](docs/DataApi.md#getgradelevelsforteacher) | **GET** /teachers/{id}/grade_levels | 
+*DataApi* | [**GetSchool**](docs/DataApi.md#getschool) | **GET** /schools/{id} | 
+*DataApi* | [**GetSchoolAdmin**](docs/DataApi.md#getschooladmin) | **GET** /school_admins/{id} | 
+*DataApi* | [**GetSchoolAdmins**](docs/DataApi.md#getschooladmins) | **GET** /school_admins | 
+*DataApi* | [**GetSchoolForSection**](docs/DataApi.md#getschoolforsection) | **GET** /sections/{id}/school | 
+*DataApi* | [**GetSchoolForStudent**](docs/DataApi.md#getschoolforstudent) | **GET** /students/{id}/school | 
+*DataApi* | [**GetSchoolForTeacher**](docs/DataApi.md#getschoolforteacher) | **GET** /teachers/{id}/school | 
+*DataApi* | [**GetSchools**](docs/DataApi.md#getschools) | **GET** /schools | 
+*DataApi* | [**GetSchoolsForSchoolAdmin**](docs/DataApi.md#getschoolsforschooladmin) | **GET** /school_admins/{id}/schools | 
+*DataApi* | [**GetSection**](docs/DataApi.md#getsection) | **GET** /sections/{id} | 
+*DataApi* | [**GetSections**](docs/DataApi.md#getsections) | **GET** /sections | 
+*DataApi* | [**GetSectionsForSchool**](docs/DataApi.md#getsectionsforschool) | **GET** /schools/{id}/sections | 
+*DataApi* | [**GetSectionsForStudent**](docs/DataApi.md#getsectionsforstudent) | **GET** /students/{id}/sections | 
+*DataApi* | [**GetSectionsForTeacher**](docs/DataApi.md#getsectionsforteacher) | **GET** /teachers/{id}/sections | 
+*DataApi* | [**GetStudent**](docs/DataApi.md#getstudent) | **GET** /students/{id} | 
+*DataApi* | [**GetStudentForContact**](docs/DataApi.md#getstudentforcontact) | **GET** /contacts/{id}/student | 
+*DataApi* | [**GetStudents**](docs/DataApi.md#getstudents) | **GET** /students | 
+*DataApi* | [**GetStudentsForSchool**](docs/DataApi.md#getstudentsforschool) | **GET** /schools/{id}/students | 
+*DataApi* | [**GetStudentsForSection**](docs/DataApi.md#getstudentsforsection) | **GET** /sections/{id}/students | 
+*DataApi* | [**GetStudentsForTeacher**](docs/DataApi.md#getstudentsforteacher) | **GET** /teachers/{id}/students | 
+*DataApi* | [**GetTeacher**](docs/DataApi.md#getteacher) | **GET** /teachers/{id} | 
+*DataApi* | [**GetTeacherForSection**](docs/DataApi.md#getteacherforsection) | **GET** /sections/{id}/teacher | 
+*DataApi* | [**GetTeachers**](docs/DataApi.md#getteachers) | **GET** /teachers | 
+*DataApi* | [**GetTeachersForSchool**](docs/DataApi.md#getteachersforschool) | **GET** /schools/{id}/teachers | 
+*DataApi* | [**GetTeachersForSection**](docs/DataApi.md#getteachersforsection) | **GET** /sections/{id}/teachers | 
+*DataApi* | [**GetTeachersForStudent**](docs/DataApi.md#getteachersforstudent) | **GET** /students/{id}/teachers | 
+*EventsApi* | [**GetEvent**](docs/EventsApi.md#getevent) | **GET** /events/{id} | 
+*EventsApi* | [**GetEvents**](docs/EventsApi.md#getevents) | **GET** /events | 
+*EventsApi* | [**GetEventsForSchool**](docs/EventsApi.md#geteventsforschool) | **GET** /schools/{id}/events | 
+*EventsApi* | [**GetEventsForSchoolAdmin**](docs/EventsApi.md#geteventsforschooladmin) | **GET** /school_admins/{id}/events | 
+*EventsApi* | [**GetEventsForSection**](docs/EventsApi.md#geteventsforsection) | **GET** /sections/{id}/events | 
+*EventsApi* | [**GetEventsForStudent**](docs/EventsApi.md#geteventsforstudent) | **GET** /students/{id}/events | 
+*EventsApi* | [**GetEventsForTeacher**](docs/EventsApi.md#geteventsforteacher) | **GET** /teachers/{id}/events | 
 
 
 <a name="documentation-for-models"></a>
@@ -176,3 +176,4 @@ Class | Method | HTTP request | Description
 - **Flow**: accessCode
 - **Authorization URL**: https://clever.com/oauth/authorize
 - **Scopes**: N/A
+

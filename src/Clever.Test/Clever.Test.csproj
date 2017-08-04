@@ -75,7 +75,7 @@ OpenAPI spec version: 1.2.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Clever\Clever.csproj">
-          <Project>{744294A2-5B7F-4DB3-A3AD-83DDE540E551}</Project>
+          <Project>{7C94FCDC-7E7F-4918-B74A-41BD350C8521}</Project>
           <Name>Clever</Name>
       </ProjectReference>
   </ItemGroup>

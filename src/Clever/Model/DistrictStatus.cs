@@ -56,10 +56,10 @@ namespace Clever.Model
             Error,
             
             /// <summary>
-            /// Enum Pause for "pause"
+            /// Enum Paused for "paused"
             /// </summary>
-            [EnumMember(Value = "pause")]
-            Pause
+            [EnumMember(Value = "paused")]
+            Paused
         }
 
         /// <summary>
