@@ -1,13 +1,16 @@
-.PHONY: all test build run
+.PHONY: all test build run override
 SHELL := /bin/bash
 
 all: test build
 
 test:
-	echo "TODO test app"
+	/bin/sh mono_nunit_test.sh
 
 build:
-	echo "TODO build app"
+	/bin/sh build.sh
 
 run: build
 	echo "TODO run app"
+
+override:
+	./override/override.sh
