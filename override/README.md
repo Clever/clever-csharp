@@ -20,7 +20,8 @@ namespace Test
         public static void Main()
         {
 
-            // Configure OAuth2 access token for authorization: oauth
+            // Note: This is hard coded for demo purposes only. Keep your access tokens secret!
+            // https://dev.clever.com/docs/security#section-security-best-practices
             Configuration.Default.AccessToken = "DEMO_TOKEN";
 
             var apiInstance = new DataApi();
@@ -29,7 +30,7 @@ namespace Test
             {
                 StudentsResponse result = apiInstance.GetStudents();
                 foreach (var student in result.Data) {
-                  Console.WriteLine("ID: {0}, Name: {1} {2}", student.Data.Id, student.Data.Name.First, student.Data.Name.Last);
+                    Console.WriteLine("ID: {0}, Name: {1} {2}", student.Data.Id, student.Data.Name.First, student.Data.Name.Last);
                 }
             }
             catch (Exception e)
@@ -60,8 +61,9 @@ namespace Test
         public static void Main()
         {
 
-            // Configure OAuth2 access token for authorization: oauth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Note: This is hard coded for demo purposes only. Keep your access tokens secret!
+            // https://dev.clever.com/docs/security#section-security-best-practices
+            Configuration.Default.AccessToken = "DEMO_EVENTS_TOKEN";
 
             var apiInstance = new EventsApi();
 
@@ -69,8 +71,8 @@ namespace Test
             {
                 EventsResponse result = apiInstance.GetEvents();
                 foreach (var eventObj in result.Data) {
-                  dynamic eventData = eventObj.Data;
-                  Console.WriteLine("Event Type:{0}, Data:{1}", eventObj.Data.GetType(), eventData.Data.ToString());
+                    dynamic eventData = eventObj.Data;
+                    Console.WriteLine("Event Type:{0}, Data:{1}", eventObj.Data.GetType(), eventData.Data.ToString());
                 }
             }
             catch (Exception e)
