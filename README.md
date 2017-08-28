@@ -115,7 +115,7 @@ Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-p
 ```
 mono nuget.exe pack -Build -OutputDirectory out src/Clever/Clever.nuspec
 ```
-
+<a name="publishing"></a>
 ## Publishing
 To publish from Mac:
 ```
@@ -140,4 +140,4 @@ java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i
 
 6. Update the version in `src/Clever/Properties/AssemblyInfo.cs`, and also `src/Clever/Clever.nuspec` if you are building on Mac
 
-7. After merging to master, don't forget to [package](#packaging) your changes and [publish](#publish)
+7. After merging to master, don't forget to [package](#packaging) your changes and [publish](#publishing)
