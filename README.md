@@ -106,10 +106,22 @@ A `.nuspec` is included with the project. You can follow the Nuget quickstart to
 This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
 
 ```
-nuget pack -Build -OutputDirectory out Clever.csproj
+nuget pack -Build -OutputDirectory out src/Clever/Clever.csproj
 ```
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
+
+**Note**: Building from the `.csproj` does not work with Mono on Mac, so you will need to edit `.nuspec` file directly, replacing `$version$` with the correct version number, then run:
+```
+mono nuget.exe pack -Build -OutputDirectory out src/Clever/Clever.nuspec
+```
+
+## Publishing
+To publish from Mac:
+```
+mono nuget.exe push out/Clever.X.X.X.nupkg API-KEY-FROM-1PFT -Source https://www.nuget.org/api/v2/package
+```
+Credentials are in 1PFT. More information about publishing to NuGet can be found [here](https://docs.microsoft.com/en-us/nuget/create-packages/publish-a-package)
 
 
 <a name="updating-library"></a>
@@ -126,4 +138,6 @@ java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i
 
 5. Run `make override` and follow the instructions.
 
-6. After merging to master, don't forget to [package](#packaging) your changes and [publish](https://docs.microsoft.com/en-us/nuget/create-packages/publish-a-package) to NuGet. Credentials are in 1PFT.
+6. Update the version in `src/Clever/Properties/AssemblyInfo.cs`, and also `src/Clever/Clever.nuspec` if you are building on Mac
+
+7. After merging to master, don't forget to [package](#packaging) your changes and [publish](#publish)
