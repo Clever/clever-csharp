@@ -4,7 +4,7 @@ Clever API
 
 The Clever API
 
-OpenAPI spec version: 1.2.0
+OpenAPI spec version: 2.0.0
 
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -75,7 +75,7 @@ OpenAPI spec version: 1.2.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Clever\Clever.csproj">
-          <Project>{7C94FCDC-7E7F-4918-B74A-41BD350C8521}</Project>
+          <Project>{AB2BD022-B0E9-48B6-9EE8-30716D92E455}</Project>
           <Name>Clever</Name>
       </ProjectReference>
   </ItemGroup>
