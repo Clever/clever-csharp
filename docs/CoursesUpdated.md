@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CoursesUpdated
+# Clever.Model.CoursesUpdated
 ## Properties
 
 Name | Type | Description | Notes

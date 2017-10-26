@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TermsUpdated
+# Clever.Model.TermsUpdated
 ## Properties
 
 Name | Type | Description | Notes

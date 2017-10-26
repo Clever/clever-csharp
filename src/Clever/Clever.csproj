@@ -12,7 +12,7 @@ OpenAPI spec version: 2.0.0
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB2BD022-B0E9-48B6-9EE8-30716D92E455}</ProjectGuid>
+    <ProjectGuid>{7AC85D4E-16EB-4452-8308-EB6F14F03ACD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Clever</RootNamespace>

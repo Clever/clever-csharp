@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DistrictadminsUpdated
+# Clever.Model.DistrictadminsUpdated
 ## Properties
 
 Name | Type | Description | Notes

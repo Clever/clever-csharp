@@ -1,4 +1,4 @@
-# IO.Swagger.Model.DistrictadminsDeleted
+# Clever.Model.DistrictadminsDeleted
 ## Properties
 
 Name | Type | Description | Notes

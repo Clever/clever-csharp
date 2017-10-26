@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ContactsCreated
+# Clever.Model.ContactsCreated
 ## Properties
 
 Name | Type | Description | Notes

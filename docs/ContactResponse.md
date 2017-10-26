@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ContactResponse
+# Clever.Model.ContactResponse
 ## Properties
 
 Name | Type | Description | Notes

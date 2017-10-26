@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TermResponse
+# Clever.Model.TermResponse
 ## Properties
 
 Name | Type | Description | Notes

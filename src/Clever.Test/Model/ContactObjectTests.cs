@@ -15,13 +15,13 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using IO.Swagger.Api;
-using IO.Swagger.Model;
-using IO.Swagger.Client;
+using Clever.Api;
+using Clever.Model;
+using Clever.Client;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace IO.Swagger.Test
+namespace Clever.Test
 {
     /// <summary>
     ///  Class for testing ContactObject

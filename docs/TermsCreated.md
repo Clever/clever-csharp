@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TermsCreated
+# Clever.Model.TermsCreated
 ## Properties
 
 Name | Type | Description | Notes
