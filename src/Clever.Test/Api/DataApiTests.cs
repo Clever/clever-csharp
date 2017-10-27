@@ -99,7 +99,9 @@ namespace Clever.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string id = null;
             //int? limit = null;
-            //var response = instance.GetContactsForStudent(id, limit);
+            //string startingAfter = null;
+            //string endingBefore = null;
+            //var response = instance.GetContactsForStudent(id, limit, startingAfter, endingBefore);
             //Assert.IsInstanceOf<ContactsResponse> (response, "response is ContactsResponse");
         }
         
@@ -172,9 +174,10 @@ namespace Clever.Test
         public void GetDistrictAdminsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //int? limit = null;
             //string startingAfter = null;
             //string endingBefore = null;
-            //var response = instance.GetDistrictAdmins(startingAfter, endingBefore);
+            //var response = instance.GetDistrictAdmins(limit, startingAfter, endingBefore);
             //Assert.IsInstanceOf<DistrictAdminsResponse> (response, "response is DistrictAdminsResponse");
         }
         

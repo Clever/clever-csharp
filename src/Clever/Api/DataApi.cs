@@ -79,8 +79,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>ContactsResponse</returns>
-        ContactsResponse GetContactsForStudent (string id, int? limit = null);
+        ContactsResponse GetContactsForStudent (string id, int? limit = null, string startingAfter = null, string endingBefore = null);
 
         /// <summary>
         /// 
@@ -91,8 +93,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>ApiResponse of ContactsResponse</returns>
-        ApiResponse<ContactsResponse> GetContactsForStudentWithHttpInfo (string id, int? limit = null);
+        ApiResponse<ContactsResponse> GetContactsForStudentWithHttpInfo (string id, int? limit = null, string startingAfter = null, string endingBefore = null);
         /// <summary>
         /// 
         /// </summary>
@@ -209,10 +213,11 @@ namespace Clever.Api
         /// Returns a list of district admins
         /// </remarks>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>DistrictAdminsResponse</returns>
-        DistrictAdminsResponse GetDistrictAdmins (string startingAfter = null, string endingBefore = null);
+        DistrictAdminsResponse GetDistrictAdmins (int? limit = null, string startingAfter = null, string endingBefore = null);
 
         /// <summary>
         /// 
@@ -221,10 +226,11 @@ namespace Clever.Api
         /// Returns a list of district admins
         /// </remarks>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>ApiResponse of DistrictAdminsResponse</returns>
-        ApiResponse<DistrictAdminsResponse> GetDistrictAdminsWithHttpInfo (string startingAfter = null, string endingBefore = null);
+        ApiResponse<DistrictAdminsResponse> GetDistrictAdminsWithHttpInfo (int? limit = null, string startingAfter = null, string endingBefore = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1276,8 +1282,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of ContactsResponse</returns>
-        System.Threading.Tasks.Task<ContactsResponse> GetContactsForStudentAsync (string id, int? limit = null);
+        System.Threading.Tasks.Task<ContactsResponse> GetContactsForStudentAsync (string id, int? limit = null, string startingAfter = null, string endingBefore = null);
 
         /// <summary>
         /// 
@@ -1288,8 +1296,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of ApiResponse (ContactsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactsResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactsResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null, string startingAfter = null, string endingBefore = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1406,10 +1416,11 @@ namespace Clever.Api
         /// Returns a list of district admins
         /// </remarks>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of DistrictAdminsResponse</returns>
-        System.Threading.Tasks.Task<DistrictAdminsResponse> GetDistrictAdminsAsync (string startingAfter = null, string endingBefore = null);
+        System.Threading.Tasks.Task<DistrictAdminsResponse> GetDistrictAdminsAsync (int? limit = null, string startingAfter = null, string endingBefore = null);
 
         /// <summary>
         /// 
@@ -1418,10 +1429,11 @@ namespace Clever.Api
         /// Returns a list of district admins
         /// </remarks>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of ApiResponse (DistrictAdminsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DistrictAdminsResponse>> GetDistrictAdminsAsyncWithHttpInfo (string startingAfter = null, string endingBefore = null);
+        System.Threading.Tasks.Task<ApiResponse<DistrictAdminsResponse>> GetDistrictAdminsAsyncWithHttpInfo (int? limit = null, string startingAfter = null, string endingBefore = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2818,10 +2830,12 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>ContactsResponse</returns>
-        public ContactsResponse GetContactsForStudent (string id, int? limit = null)
+        public ContactsResponse GetContactsForStudent (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
         {
-             ApiResponse<ContactsResponse> localVarResponse = GetContactsForStudentWithHttpInfo(id, limit);
+             ApiResponse<ContactsResponse> localVarResponse = GetContactsForStudentWithHttpInfo(id, limit, startingAfter, endingBefore);
              return localVarResponse.Data;
         }
 
@@ -2831,8 +2845,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>ApiResponse of ContactsResponse</returns>
-        public ApiResponse< ContactsResponse > GetContactsForStudentWithHttpInfo (string id, int? limit = null)
+        public ApiResponse< ContactsResponse > GetContactsForStudentWithHttpInfo (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2861,6 +2877,8 @@ namespace Clever.Api
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -2893,10 +2911,12 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of ContactsResponse</returns>
-        public async System.Threading.Tasks.Task<ContactsResponse> GetContactsForStudentAsync (string id, int? limit = null)
+        public async System.Threading.Tasks.Task<ContactsResponse> GetContactsForStudentAsync (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
         {
-             ApiResponse<ContactsResponse> localVarResponse = await GetContactsForStudentAsyncWithHttpInfo(id, limit);
+             ApiResponse<ContactsResponse> localVarResponse = await GetContactsForStudentAsyncWithHttpInfo(id, limit, startingAfter, endingBefore);
              return localVarResponse.Data;
 
         }
@@ -2907,8 +2927,10 @@ namespace Clever.Api
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="limit"> (optional)</param>
+        /// <param name="startingAfter"> (optional)</param>
+        /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of ApiResponse (ContactsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactsResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactsResponse>> GetContactsForStudentAsyncWithHttpInfo (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2937,6 +2959,8 @@ namespace Clever.Api
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -3698,12 +3722,13 @@ namespace Clever.Api
         ///  Returns a list of district admins
         /// </summary>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>DistrictAdminsResponse</returns>
-        public DistrictAdminsResponse GetDistrictAdmins (string startingAfter = null, string endingBefore = null)
+        public DistrictAdminsResponse GetDistrictAdmins (int? limit = null, string startingAfter = null, string endingBefore = null)
         {
-             ApiResponse<DistrictAdminsResponse> localVarResponse = GetDistrictAdminsWithHttpInfo(startingAfter, endingBefore);
+             ApiResponse<DistrictAdminsResponse> localVarResponse = GetDistrictAdminsWithHttpInfo(limit, startingAfter, endingBefore);
              return localVarResponse.Data;
         }
 
@@ -3711,10 +3736,11 @@ namespace Clever.Api
         ///  Returns a list of district admins
         /// </summary>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>ApiResponse of DistrictAdminsResponse</returns>
-        public ApiResponse< DistrictAdminsResponse > GetDistrictAdminsWithHttpInfo (string startingAfter = null, string endingBefore = null)
+        public ApiResponse< DistrictAdminsResponse > GetDistrictAdminsWithHttpInfo (int? limit = null, string startingAfter = null, string endingBefore = null)
         {
 
             var localVarPath = "/district_admins";
@@ -3738,6 +3764,7 @@ namespace Clever.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
             if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
@@ -3770,12 +3797,13 @@ namespace Clever.Api
         ///  Returns a list of district admins
         /// </summary>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of DistrictAdminsResponse</returns>
-        public async System.Threading.Tasks.Task<DistrictAdminsResponse> GetDistrictAdminsAsync (string startingAfter = null, string endingBefore = null)
+        public async System.Threading.Tasks.Task<DistrictAdminsResponse> GetDistrictAdminsAsync (int? limit = null, string startingAfter = null, string endingBefore = null)
         {
-             ApiResponse<DistrictAdminsResponse> localVarResponse = await GetDistrictAdminsAsyncWithHttpInfo(startingAfter, endingBefore);
+             ApiResponse<DistrictAdminsResponse> localVarResponse = await GetDistrictAdminsAsyncWithHttpInfo(limit, startingAfter, endingBefore);
              return localVarResponse.Data;
 
         }
@@ -3784,10 +3812,11 @@ namespace Clever.Api
         ///  Returns a list of district admins
         /// </summary>
         /// <exception cref="Clever.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="limit"> (optional)</param>
         /// <param name="startingAfter"> (optional)</param>
         /// <param name="endingBefore"> (optional)</param>
         /// <returns>Task of ApiResponse (DistrictAdminsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DistrictAdminsResponse>> GetDistrictAdminsAsyncWithHttpInfo (string startingAfter = null, string endingBefore = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DistrictAdminsResponse>> GetDistrictAdminsAsyncWithHttpInfo (int? limit = null, string startingAfter = null, string endingBefore = null)
         {
 
             var localVarPath = "/district_admins";
@@ -3811,6 +3840,7 @@ namespace Clever.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
             if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
             if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 

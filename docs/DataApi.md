@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontactsforstudent"></a>
 # **GetContactsForStudent**
-> ContactsResponse GetContactsForStudent (string id, int? limit = null)
+> ContactsResponse GetContactsForStudent (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
 
 
 
@@ -215,10 +215,12 @@ namespace Example
             var apiInstance = new DataApi();
             var id = id_example;  // string | 
             var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
 
             try
             {
-                ContactsResponse result = apiInstance.GetContactsForStudent(id, limit);
+                ContactsResponse result = apiInstance.GetContactsForStudent(id, limit, startingAfter, endingBefore);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -236,6 +238,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  | 
  **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
 
 ### Return type
 
@@ -573,7 +577,7 @@ Name | Type | Description  | Notes
 
 <a name="getdistrictadmins"></a>
 # **GetDistrictAdmins**
-> DistrictAdminsResponse GetDistrictAdmins (string startingAfter = null, string endingBefore = null)
+> DistrictAdminsResponse GetDistrictAdmins (int? limit = null, string startingAfter = null, string endingBefore = null)
 
 
 
@@ -597,12 +601,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DataApi();
+            var limit = 56;  // int? |  (optional) 
             var startingAfter = startingAfter_example;  // string |  (optional) 
             var endingBefore = endingBefore_example;  // string |  (optional) 
 
             try
             {
-                DistrictAdminsResponse result = apiInstance.GetDistrictAdmins(startingAfter, endingBefore);
+                DistrictAdminsResponse result = apiInstance.GetDistrictAdmins(limit, startingAfter, endingBefore);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -618,6 +623,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **int?**|  | [optional] 
  **startingAfter** | **string**|  | [optional] 
  **endingBefore** | **string**|  | [optional] 
 
