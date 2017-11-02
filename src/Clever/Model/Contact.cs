@@ -31,6 +31,44 @@ namespace Clever.Model
     public partial class Contact :  IEquatable<Contact>, IValidatableObject
     {
         /// <summary>
+        /// Gets or Sets PhoneType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PhoneTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Cell for "Cell"
+            /// </summary>
+            [EnumMember(Value = "Cell")]
+            Cell,
+            
+            /// <summary>
+            /// Enum Home for "Home"
+            /// </summary>
+            [EnumMember(Value = "Home")]
+            Home,
+            
+            /// <summary>
+            /// Enum Work for "Work"
+            /// </summary>
+            [EnumMember(Value = "Work")]
+            Work,
+            
+            /// <summary>
+            /// Enum Other for "Other"
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other,
+            
+            /// <summary>
+            /// Enum Empty for ""
+            /// </summary>
+            [EnumMember(Value = "")]
+            Empty
+        }
+
+        /// <summary>
         /// Gets or Sets Relationship
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
@@ -131,6 +169,11 @@ namespace Clever.Model
         }
 
         /// <summary>
+        /// Gets or Sets PhoneType
+        /// </summary>
+        [DataMember(Name="phone_type", EmitDefaultValue=false)]
+        public PhoneTypeEnum? PhoneType { get; set; }
+        /// <summary>
         /// Gets or Sets Relationship
         /// </summary>
         [DataMember(Name="relationship", EmitDefaultValue=false)]
@@ -153,7 +196,7 @@ namespace Clever.Model
         /// <param name="SisId">SisId.</param>
         /// <param name="Students">Students.</param>
         /// <param name="Type">Type.</param>
-        public Contact(string District = default(string), string Email = default(string), string Id = default(string), string Name = default(string), string Phone = default(string), string PhoneType = default(string), RelationshipEnum? Relationship = default(RelationshipEnum?), string SisId = default(string), List<string> Students = default(List<string>), TypeEnum? Type = default(TypeEnum?))
+        public Contact(string District = default(string), string Email = default(string), string Id = default(string), string Name = default(string), string Phone = default(string), PhoneTypeEnum? PhoneType = default(PhoneTypeEnum?), RelationshipEnum? Relationship = default(RelationshipEnum?), string SisId = default(string), List<string> Students = default(List<string>), TypeEnum? Type = default(TypeEnum?))
         {
             this.District = District;
             this.Email = Email;
@@ -197,11 +240,6 @@ namespace Clever.Model
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
-        /// <summary>
-        /// Gets or Sets PhoneType
-        /// </summary>
-        [DataMember(Name="phone_type", EmitDefaultValue=false)]
-        public string PhoneType { get; set; }
 
 
         /// <summary>
