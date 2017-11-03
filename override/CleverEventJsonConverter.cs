@@ -40,12 +40,12 @@ public class CleverEventJsonConverter : JsonConverter
                 return model.ToObject<SectionsDeleted>();
             case "sections.updated":
                 return model.ToObject<SectionsUpdated>();
-            case "studentcontacts.created":
-              return model.ToObject<StudentcontactsCreated>();
-            case "studentcontacts.deleted":
-                return model.ToObject<StudentcontactsDeleted>();
-            case "studentcontacts.updated":
-                return model.ToObject<StudentcontactsUpdated>();
+            case "contacts.created":
+              return model.ToObject<ContactsCreated>();
+            case "contacts.deleted":
+                return model.ToObject<ContactsDeleted>();
+            case "contacts.updated":
+                return model.ToObject<ContactsUpdated>();
             case "students.created":
               return model.ToObject<StudentsCreated>();
             case "students.deleted":
@@ -58,6 +58,25 @@ public class CleverEventJsonConverter : JsonConverter
               return model.ToObject<TeachersDeleted>();
             case "teachers.updated":
               return model.ToObject<TeachersUpdated>();
+            case "terms.created":
+              return model.ToObject<TermsCreated>();
+            case "terms.deleted":
+              return model.ToObject<TermsDeleted>();
+            case "terms.updated":
+              return model.ToObject<TermsUpdated>();
+            case "courses.created":
+              return model.ToObject<CoursesCreated>();
+            case "courses.deleted":
+              return model.ToObject<CoursesDeleted>();
+            case "courses.updated":
+              return model.ToObject<CoursesUpdated>();
+            case "districtadmins.created":
+              return model.ToObject<DistrictadminsCreated>();
+            case "districtadmins.deleted":
+              return model.ToObject<DistrictadminsDeleted>();
+            case "districtadmins.updated":
+              return model.ToObject<DistrictadminsUpdated>();
+
             default:
               throw new Exception("Unknown event type "+model["type"].ToString());
         }

@@ -1,23 +1,28 @@
 # Clever.Api.DataApi
 
-All URIs are relative to *https://api.clever.com/v1.2*
+All URIs are relative to *https://api.clever.com/v2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetContact**](DataApi.md#getcontact) | **GET** /contacts/{id} | 
 [**GetContacts**](DataApi.md#getcontacts) | **GET** /contacts | 
 [**GetContactsForStudent**](DataApi.md#getcontactsforstudent) | **GET** /students/{id}/contacts | 
+[**GetCourse**](DataApi.md#getcourse) | **GET** /courses/{id} | 
+[**GetCourseForSection**](DataApi.md#getcourseforsection) | **GET** /sections/{id}/course | 
+[**GetCourses**](DataApi.md#getcourses) | **GET** /courses | 
 [**GetDistrict**](DataApi.md#getdistrict) | **GET** /districts/{id} | 
 [**GetDistrictAdmin**](DataApi.md#getdistrictadmin) | **GET** /district_admins/{id} | 
 [**GetDistrictAdmins**](DataApi.md#getdistrictadmins) | **GET** /district_admins | 
+[**GetDistrictForContact**](DataApi.md#getdistrictforcontact) | **GET** /contacts/{id}/district | 
+[**GetDistrictForCourse**](DataApi.md#getdistrictforcourse) | **GET** /courses/{id}/district | 
+[**GetDistrictForDistrictAdmin**](DataApi.md#getdistrictfordistrictadmin) | **GET** /district_admins/{id}/district | 
 [**GetDistrictForSchool**](DataApi.md#getdistrictforschool) | **GET** /schools/{id}/district | 
+[**GetDistrictForSchoolAdmin**](DataApi.md#getdistrictforschooladmin) | **GET** /school_admins/{id}/district | 
 [**GetDistrictForSection**](DataApi.md#getdistrictforsection) | **GET** /sections/{id}/district | 
 [**GetDistrictForStudent**](DataApi.md#getdistrictforstudent) | **GET** /students/{id}/district | 
-[**GetDistrictForStudentContact**](DataApi.md#getdistrictforstudentcontact) | **GET** /contacts/{id}/district | 
 [**GetDistrictForTeacher**](DataApi.md#getdistrictforteacher) | **GET** /teachers/{id}/district | 
-[**GetDistrictStatus**](DataApi.md#getdistrictstatus) | **GET** /districts/{id}/status | 
+[**GetDistrictForTerm**](DataApi.md#getdistrictforterm) | **GET** /terms/{id}/district | 
 [**GetDistricts**](DataApi.md#getdistricts) | **GET** /districts | 
-[**GetGradeLevelsForTeacher**](DataApi.md#getgradelevelsforteacher) | **GET** /teachers/{id}/grade_levels | 
 [**GetSchool**](DataApi.md#getschool) | **GET** /schools/{id} | 
 [**GetSchoolAdmin**](DataApi.md#getschooladmin) | **GET** /school_admins/{id} | 
 [**GetSchoolAdmins**](DataApi.md#getschooladmins) | **GET** /school_admins | 
@@ -26,14 +31,18 @@ Method | HTTP request | Description
 [**GetSchoolForTeacher**](DataApi.md#getschoolforteacher) | **GET** /teachers/{id}/school | 
 [**GetSchools**](DataApi.md#getschools) | **GET** /schools | 
 [**GetSchoolsForSchoolAdmin**](DataApi.md#getschoolsforschooladmin) | **GET** /school_admins/{id}/schools | 
+[**GetSchoolsForStudent**](DataApi.md#getschoolsforstudent) | **GET** /students/{id}/schools | 
+[**GetSchoolsForTeacher**](DataApi.md#getschoolsforteacher) | **GET** /teachers/{id}/schools | 
 [**GetSection**](DataApi.md#getsection) | **GET** /sections/{id} | 
 [**GetSections**](DataApi.md#getsections) | **GET** /sections | 
+[**GetSectionsForCourse**](DataApi.md#getsectionsforcourse) | **GET** /courses/{id}/sections | 
 [**GetSectionsForSchool**](DataApi.md#getsectionsforschool) | **GET** /schools/{id}/sections | 
 [**GetSectionsForStudent**](DataApi.md#getsectionsforstudent) | **GET** /students/{id}/sections | 
 [**GetSectionsForTeacher**](DataApi.md#getsectionsforteacher) | **GET** /teachers/{id}/sections | 
+[**GetSectionsForTerm**](DataApi.md#getsectionsforterm) | **GET** /terms/{id}/sections | 
 [**GetStudent**](DataApi.md#getstudent) | **GET** /students/{id} | 
-[**GetStudentForContact**](DataApi.md#getstudentforcontact) | **GET** /contacts/{id}/student | 
 [**GetStudents**](DataApi.md#getstudents) | **GET** /students | 
+[**GetStudentsForContact**](DataApi.md#getstudentsforcontact) | **GET** /contacts/{id}/students | 
 [**GetStudentsForSchool**](DataApi.md#getstudentsforschool) | **GET** /schools/{id}/students | 
 [**GetStudentsForSection**](DataApi.md#getstudentsforsection) | **GET** /sections/{id}/students | 
 [**GetStudentsForTeacher**](DataApi.md#getstudentsforteacher) | **GET** /teachers/{id}/students | 
@@ -43,11 +52,14 @@ Method | HTTP request | Description
 [**GetTeachersForSchool**](DataApi.md#getteachersforschool) | **GET** /schools/{id}/teachers | 
 [**GetTeachersForSection**](DataApi.md#getteachersforsection) | **GET** /sections/{id}/teachers | 
 [**GetTeachersForStudent**](DataApi.md#getteachersforstudent) | **GET** /students/{id}/teachers | 
+[**GetTerm**](DataApi.md#getterm) | **GET** /terms/{id} | 
+[**GetTermForSection**](DataApi.md#gettermforsection) | **GET** /sections/{id}/term | 
+[**GetTerms**](DataApi.md#getterms) | **GET** /terms | 
 
 
 <a name="getcontact"></a>
 # **GetContact**
-> StudentContactResponse GetContact (string id)
+> ContactResponse GetContact (string id)
 
 
 
@@ -75,7 +87,7 @@ namespace Example
 
             try
             {
-                StudentContactResponse result = apiInstance.GetContact(id);
+                ContactResponse result = apiInstance.GetContact(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -95,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StudentContactResponse**](StudentContactResponse.md)
+[**ContactResponse**](ContactResponse.md)
 
 ### Authorization
 
@@ -110,7 +122,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontacts"></a>
 # **GetContacts**
-> StudentContactsResponse GetContacts (int? limit = null, string startingAfter = null, string endingBefore = null)
+> ContactsResponse GetContacts (int? limit = null, string startingAfter = null, string endingBefore = null)
 
 
 
@@ -140,7 +152,7 @@ namespace Example
 
             try
             {
-                StudentContactsResponse result = apiInstance.GetContacts(limit, startingAfter, endingBefore);
+                ContactsResponse result = apiInstance.GetContacts(limit, startingAfter, endingBefore);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -162,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StudentContactsResponse**](StudentContactsResponse.md)
+[**ContactsResponse**](ContactsResponse.md)
 
 ### Authorization
 
@@ -177,7 +189,7 @@ Name | Type | Description  | Notes
 
 <a name="getcontactsforstudent"></a>
 # **GetContactsForStudent**
-> StudentContactsForStudentResponse GetContactsForStudent (string id, int? limit = null)
+> ContactsResponse GetContactsForStudent (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
 
 
 
@@ -203,10 +215,12 @@ namespace Example
             var apiInstance = new DataApi();
             var id = id_example;  // string | 
             var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
 
             try
             {
-                StudentContactsForStudentResponse result = apiInstance.GetContactsForStudent(id, limit);
+                ContactsResponse result = apiInstance.GetContactsForStudent(id, limit, startingAfter, endingBefore);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -224,10 +238,205 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  | 
  **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
 
 ### Return type
 
-[**StudentContactsForStudentResponse**](StudentContactsForStudentResponse.md)
+[**ContactsResponse**](ContactsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcourse"></a>
+# **GetCourse**
+> CourseResponse GetCourse (string id)
+
+
+
+Returns a specific course
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetCourseExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                CourseResponse result = apiInstance.GetCourse(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetCourse: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**CourseResponse**](CourseResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcourseforsection"></a>
+# **GetCourseForSection**
+> CourseResponse GetCourseForSection (string id)
+
+
+
+Returns the course for a section
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetCourseForSectionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                CourseResponse result = apiInstance.GetCourseForSection(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetCourseForSection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**CourseResponse**](CourseResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getcourses"></a>
+# **GetCourses**
+> CoursesResponse GetCourses (int? limit = null, string startingAfter = null, string endingBefore = null)
+
+
+
+Returns a list of courses
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetCoursesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
+
+            try
+            {
+                CoursesResponse result = apiInstance.GetCourses(limit, startingAfter, endingBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetCourses: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
+
+### Return type
+
+[**CoursesResponse**](CoursesResponse.md)
 
 ### Authorization
 
@@ -368,7 +577,7 @@ Name | Type | Description  | Notes
 
 <a name="getdistrictadmins"></a>
 # **GetDistrictAdmins**
-> DistrictAdminsResponse GetDistrictAdmins (string startingAfter = null, string endingBefore = null)
+> DistrictAdminsResponse GetDistrictAdmins (int? limit = null, string startingAfter = null, string endingBefore = null)
 
 
 
@@ -392,12 +601,13 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new DataApi();
+            var limit = 56;  // int? |  (optional) 
             var startingAfter = startingAfter_example;  // string |  (optional) 
             var endingBefore = endingBefore_example;  // string |  (optional) 
 
             try
             {
-                DistrictAdminsResponse result = apiInstance.GetDistrictAdmins(startingAfter, endingBefore);
+                DistrictAdminsResponse result = apiInstance.GetDistrictAdmins(limit, startingAfter, endingBefore);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -413,12 +623,202 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **int?**|  | [optional] 
  **startingAfter** | **string**|  | [optional] 
  **endingBefore** | **string**|  | [optional] 
 
 ### Return type
 
 [**DistrictAdminsResponse**](DistrictAdminsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdistrictforcontact"></a>
+# **GetDistrictForContact**
+> DistrictResponse GetDistrictForContact (string id)
+
+
+
+Returns the district for a student contact
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetDistrictForContactExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                DistrictResponse result = apiInstance.GetDistrictForContact(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetDistrictForContact: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdistrictforcourse"></a>
+# **GetDistrictForCourse**
+> DistrictResponse GetDistrictForCourse (string id)
+
+
+
+Returns the district for a course
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetDistrictForCourseExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                DistrictResponse result = apiInstance.GetDistrictForCourse(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetDistrictForCourse: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdistrictfordistrictadmin"></a>
+# **GetDistrictForDistrictAdmin**
+> DistrictResponse GetDistrictForDistrictAdmin (string id)
+
+
+
+Returns the district for a district admin
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetDistrictForDistrictAdminExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                DistrictResponse result = apiInstance.GetDistrictForDistrictAdmin(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetDistrictForDistrictAdmin: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
 
 ### Authorization
 
@@ -467,6 +867,69 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling DataApi.GetDistrictForSchool: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**DistrictResponse**](DistrictResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdistrictforschooladmin"></a>
+# **GetDistrictForSchoolAdmin**
+> DistrictResponse GetDistrictForSchoolAdmin (string id)
+
+
+
+Returns the district for a school admin
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetDistrictForSchoolAdminExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                DistrictResponse result = apiInstance.GetDistrictForSchoolAdmin(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetDistrictForSchoolAdmin: " + e.Message );
             }
         }
     }
@@ -620,69 +1083,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getdistrictforstudentcontact"></a>
-# **GetDistrictForStudentContact**
-> DistrictResponse GetDistrictForStudentContact (string id)
-
-
-
-Returns the district for a student contact
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Clever.Api;
-using Clever.Client;
-using Clever.Model;
-
-namespace Example
-{
-    public class GetDistrictForStudentContactExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new DataApi();
-            var id = id_example;  // string | 
-
-            try
-            {
-                DistrictResponse result = apiInstance.GetDistrictForStudentContact(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling DataApi.GetDistrictForStudentContact: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  | 
-
-### Return type
-
-[**DistrictResponse**](DistrictResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getdistrictforteacher"></a>
 # **GetDistrictForTeacher**
 > DistrictResponse GetDistrictForTeacher (string id)
@@ -746,13 +1146,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getdistrictstatus"></a>
-# **GetDistrictStatus**
-> DistrictStatusResponses GetDistrictStatus (string id)
+<a name="getdistrictforterm"></a>
+# **GetDistrictForTerm**
+> DistrictResponse GetDistrictForTerm (string id)
 
 
 
-Returns the status of the district
+Returns the district for a term
 
 ### Example
 ```csharp
@@ -764,7 +1164,7 @@ using Clever.Model;
 
 namespace Example
 {
-    public class GetDistrictStatusExample
+    public class GetDistrictForTermExample
     {
         public void main()
         {
@@ -776,12 +1176,12 @@ namespace Example
 
             try
             {
-                DistrictStatusResponses result = apiInstance.GetDistrictStatus(id);
+                DistrictResponse result = apiInstance.GetDistrictForTerm(id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DataApi.GetDistrictStatus: " + e.Message );
+                Debug.Print("Exception when calling DataApi.GetDistrictForTerm: " + e.Message );
             }
         }
     }
@@ -796,7 +1196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DistrictStatusResponses**](DistrictStatusResponses.md)
+[**DistrictResponse**](DistrictResponse.md)
 
 ### Authorization
 
@@ -856,69 +1256,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**DistrictsResponse**](DistrictsResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getgradelevelsforteacher"></a>
-# **GetGradeLevelsForTeacher**
-> GradeLevelsResponse GetGradeLevelsForTeacher (string id)
-
-
-
-Returns the grade levels for sections a teacher teaches
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Clever.Api;
-using Clever.Client;
-using Clever.Model;
-
-namespace Example
-{
-    public class GetGradeLevelsForTeacherExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new DataApi();
-            var id = id_example;  // string | 
-
-            try
-            {
-                GradeLevelsResponse result = apiInstance.GetGradeLevelsForTeacher(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling DataApi.GetGradeLevelsForTeacher: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  | 
-
-### Return type
-
-[**GradeLevelsResponse**](GradeLevelsResponse.md)
 
 ### Authorization
 
@@ -1449,6 +1786,144 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getschoolsforstudent"></a>
+# **GetSchoolsForStudent**
+> SchoolsResponse GetSchoolsForStudent (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
+
+
+
+Returns the schools for a student
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetSchoolsForStudentExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+            var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
+
+            try
+            {
+                SchoolsResponse result = apiInstance.GetSchoolsForStudent(id, limit, startingAfter, endingBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetSchoolsForStudent: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+ **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
+
+### Return type
+
+[**SchoolsResponse**](SchoolsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getschoolsforteacher"></a>
+# **GetSchoolsForTeacher**
+> SchoolsResponse GetSchoolsForTeacher (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
+
+
+
+Returns the schools for a teacher
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetSchoolsForTeacherExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+            var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
+
+            try
+            {
+                SchoolsResponse result = apiInstance.GetSchoolsForTeacher(id, limit, startingAfter, endingBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetSchoolsForTeacher: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+ **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
+
+### Return type
+
+[**SchoolsResponse**](SchoolsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getsection"></a>
 # **GetSection**
 > SectionResponse GetSection (string id)
@@ -1560,6 +2035,75 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
+
+### Return type
+
+[**SectionsResponse**](SectionsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsectionsforcourse"></a>
+# **GetSectionsForCourse**
+> SectionsResponse GetSectionsForCourse (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
+
+
+
+Returns the sections for a Courses
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetSectionsForCourseExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+            var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
+
+            try
+            {
+                SectionsResponse result = apiInstance.GetSectionsForCourse(id, limit, startingAfter, endingBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetSectionsForCourse: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
  **limit** | **int?**|  | [optional] 
  **startingAfter** | **string**|  | [optional] 
  **endingBefore** | **string**|  | [optional] 
@@ -1786,6 +2330,75 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getsectionsforterm"></a>
+# **GetSectionsForTerm**
+> SectionsResponse GetSectionsForTerm (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
+
+
+
+Returns the sections for a term
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetSectionsForTermExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+            var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
+
+            try
+            {
+                SectionsResponse result = apiInstance.GetSectionsForTerm(id, limit, startingAfter, endingBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetSectionsForTerm: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+ **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
+
+### Return type
+
+[**SectionsResponse**](SectionsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getstudent"></a>
 # **GetStudent**
 > StudentResponse GetStudent (string id)
@@ -1822,69 +2435,6 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling DataApi.GetStudent: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  | 
-
-### Return type
-
-[**StudentResponse**](StudentResponse.md)
-
-### Authorization
-
-[oauth](../README.md#oauth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getstudentforcontact"></a>
-# **GetStudentForContact**
-> StudentResponse GetStudentForContact (string id)
-
-
-
-Returns the student for a student contact
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Clever.Api;
-using Clever.Client;
-using Clever.Model;
-
-namespace Example
-{
-    public class GetStudentForContactExample
-    {
-        public void main()
-        {
-            // Configure OAuth2 access token for authorization: oauth
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new DataApi();
-            var id = id_example;  // string | 
-
-            try
-            {
-                StudentResponse result = apiInstance.GetStudentForContact(id);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling DataApi.GetStudentForContact: " + e.Message );
             }
         }
     }
@@ -1960,6 +2510,75 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
+
+### Return type
+
+[**StudentsResponse**](StudentsResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstudentsforcontact"></a>
+# **GetStudentsForContact**
+> StudentsResponse GetStudentsForContact (string id, int? limit = null, string startingAfter = null, string endingBefore = null)
+
+
+
+Returns the students for a student contact
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetStudentsForContactExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+            var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
+
+            try
+            {
+                StudentsResponse result = apiInstance.GetStudentsForContact(id, limit, startingAfter, endingBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetStudentsForContact: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
  **limit** | **int?**|  | [optional] 
  **startingAfter** | **string**|  | [optional] 
  **endingBefore** | **string**|  | [optional] 
@@ -2574,6 +3193,199 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TeachersResponse**](TeachersResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getterm"></a>
+# **GetTerm**
+> TermResponse GetTerm (string id)
+
+
+
+Returns a specific term
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetTermExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                TermResponse result = apiInstance.GetTerm(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetTerm: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**TermResponse**](TermResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="gettermforsection"></a>
+# **GetTermForSection**
+> TermResponse GetTermForSection (string id)
+
+
+
+Returns the term for a section
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetTermForSectionExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var id = id_example;  // string | 
+
+            try
+            {
+                TermResponse result = apiInstance.GetTermForSection(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetTermForSection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  | 
+
+### Return type
+
+[**TermResponse**](TermResponse.md)
+
+### Authorization
+
+[oauth](../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getterms"></a>
+# **GetTerms**
+> TermsResponse GetTerms (int? limit = null, string startingAfter = null, string endingBefore = null)
+
+
+
+Returns a list of terms
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Clever.Api;
+using Clever.Client;
+using Clever.Model;
+
+namespace Example
+{
+    public class GetTermsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new DataApi();
+            var limit = 56;  // int? |  (optional) 
+            var startingAfter = startingAfter_example;  // string |  (optional) 
+            var endingBefore = endingBefore_example;  // string |  (optional) 
+
+            try
+            {
+                TermsResponse result = apiInstance.GetTerms(limit, startingAfter, endingBefore);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling DataApi.GetTerms: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int?**|  | [optional] 
+ **startingAfter** | **string**|  | [optional] 
+ **endingBefore** | **string**|  | [optional] 
+
+### Return type
+
+[**TermsResponse**](TermsResponse.md)
 
 ### Authorization
 

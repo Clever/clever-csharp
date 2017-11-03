@@ -3,9 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CourseDescription** | **string** |  | [optional] 
-**CourseName** | **string** |  | [optional] 
-**CourseNumber** | **string** |  | [optional] 
+**Course** | **string** |  | [optional] 
 **Created** | **string** |  | [optional] 
 **District** | **string** |  | [optional] 
 **Grade** | **string** |  | [optional] 
@@ -20,7 +18,7 @@ Name | Type | Description | Notes
 **Subject** | **string** |  | [optional] 
 **Teacher** | **string** |  | [optional] 
 **Teachers** | **List&lt;string&gt;** |  | [optional] 
-**Term** | [**Term**](Term.md) |  | [optional] 
+**TermId** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
