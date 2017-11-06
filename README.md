@@ -22,7 +22,7 @@ namespace Test
 
             // Note: This is hard coded for demo purposes only. Keep your access tokens secret!
             // https://dev.clever.com/docs/security#section-security-best-practices
-            Configuration.Default.AccessToken = "DEMO_TOKEN";
+            Configuration.Default.AccessToken = "TEST_TOKEN";
 
             var apiInstance = new DataApi();
 
@@ -63,7 +63,7 @@ namespace Test
 
             // Note: This is hard coded for demo purposes only. Keep your access tokens secret!
             // https://dev.clever.com/docs/security#section-security-best-practices
-            Configuration.Default.AccessToken = "DEMO_EVENTS_TOKEN";
+            Configuration.Default.AccessToken = "TEST_TOKEN";
 
             var apiInstance = new EventsApi();
 
