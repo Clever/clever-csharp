@@ -35,5 +35,6 @@
         <file src="..\..\README.md" target="" />
         <file src="..\..\docs\**\*.*" target="docs" />
 
+        <file src="..\..\bin\*.dll" target="lib/net45" />
     </files>
 </package>
