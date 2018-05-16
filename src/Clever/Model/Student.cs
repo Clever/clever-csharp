@@ -460,10 +460,10 @@ namespace Clever.Model
             Tamil,
             
             /// <summary>
-            /// Enum Telegu for "Telegu"
+            /// Enum Telugu for "Telugu"
             /// </summary>
-            [EnumMember(Value = "Telegu")]
-            Telegu,
+            [EnumMember(Value = "Telugu")]
+            Telugu,
             
             /// <summary>
             /// Enum Thai for "Thai"
