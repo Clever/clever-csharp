@@ -404,15 +404,9 @@ namespace Clever.Api
         /// <returns></returns>
         public EventsApi(String basePath)
         {
-            this.Configuration = new Configuration(new ApiClient(basePath));
+            this.Configuration = new Configuration { BasePath = basePath };
 
             ExceptionFactory = Clever.Client.Configuration.DefaultExceptionFactory;
-
-            // ensure API client has configuration ready
-            if (Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
         }
 
         /// <summary>
@@ -429,12 +423,6 @@ namespace Clever.Api
                 this.Configuration = configuration;
 
             ExceptionFactory = Clever.Client.Configuration.DefaultExceptionFactory;
-
-            // ensure API client has configuration ready
-            if (Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
         }
 
         /// <summary>
@@ -483,9 +471,9 @@ namespace Clever.Api
         /// </summary>
         /// <returns>Dictionary of HTTP header</returns>
         [Obsolete("DefaultHeader is deprecated, please use Configuration.DefaultHeader instead.")]
-        public Dictionary<String, String> DefaultHeader()
+        public IDictionary<String, String> DefaultHeader()
         {
-            return this.Configuration.DefaultHeader;
+            return new ReadOnlyDictionary<string, string>(this.Configuration.DefaultHeader);
         }
 
         /// <summary>
@@ -526,7 +514,7 @@ namespace Clever.Api
 
             var localVarPath = "/events/{id}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -599,7 +587,7 @@ namespace Clever.Api
 
             var localVarPath = "/events/{id}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -672,7 +660,7 @@ namespace Clever.Api
 
             var localVarPath = "/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -691,9 +679,9 @@ namespace Clever.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -748,7 +736,7 @@ namespace Clever.Api
 
             var localVarPath = "/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -767,9 +755,9 @@ namespace Clever.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -828,7 +816,7 @@ namespace Clever.Api
 
             var localVarPath = "/schools/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -848,9 +836,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -910,7 +898,7 @@ namespace Clever.Api
 
             var localVarPath = "/schools/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -930,9 +918,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -991,7 +979,7 @@ namespace Clever.Api
 
             var localVarPath = "/school_admins/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1011,9 +999,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -1073,7 +1061,7 @@ namespace Clever.Api
 
             var localVarPath = "/school_admins/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1093,9 +1081,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -1154,7 +1142,7 @@ namespace Clever.Api
 
             var localVarPath = "/sections/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1174,9 +1162,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -1236,7 +1224,7 @@ namespace Clever.Api
 
             var localVarPath = "/sections/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1256,9 +1244,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -1317,7 +1305,7 @@ namespace Clever.Api
 
             var localVarPath = "/students/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1337,9 +1325,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -1399,7 +1387,7 @@ namespace Clever.Api
 
             var localVarPath = "/students/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1419,9 +1407,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -1480,7 +1468,7 @@ namespace Clever.Api
 
             var localVarPath = "/teachers/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1500,9 +1488,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required
@@ -1562,7 +1550,7 @@ namespace Clever.Api
 
             var localVarPath = "/teachers/{id}/events";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1582,9 +1570,9 @@ namespace Clever.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (startingAfter != null) localVarQueryParams.Add("starting_after", Configuration.ApiClient.ParameterToString(startingAfter)); // query parameter
-            if (endingBefore != null) localVarQueryParams.Add("ending_before", Configuration.ApiClient.ParameterToString(endingBefore)); // query parameter
+            if (limit != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "limit", limit)); // query parameter
+            if (startingAfter != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "starting_after", startingAfter)); // query parameter
+            if (endingBefore != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ending_before", endingBefore)); // query parameter
 
             // authentication (oauth) required
             // oauth required

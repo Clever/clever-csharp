@@ -19,6 +19,7 @@ using Clever.Api;
 using Clever.Model;
 using Clever.Client;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Clever.Test
 {
@@ -63,6 +64,7 @@ namespace Clever.Test
             // TODO uncomment below to test "IsInstanceOfType" SchoolResponse
             //Assert.IsInstanceOfType<SchoolResponse> (instance, "variable 'instance' is a SchoolResponse");
         }
+
 
         /// <summary>
         /// Test the property 'Data'

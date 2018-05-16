@@ -38,44 +38,12 @@ namespace Clever.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SectionsCreated" /> class.
         /// </summary>
-        /// <param name="Created">Created.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Type">Type (required).</param>
         /// <param name="Data">Data.</param>
-        public SectionsCreated(string Created = default(string), string Id = default(string), string Type = default(string), SectionObject Data = default(SectionObject))
+        public SectionsCreated(SectionObject Data = default(SectionObject), string Created = default(string), string Id = default(string), string Type = default(string)) : base()
         {
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for SectionsCreated and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
-            this.Created = Created;
-            this.Id = Id;
             this.Data = Data;
         }
         
-        /// <summary>
-        /// Gets or Sets Created
-        /// </summary>
-        [DataMember(Name="created", EmitDefaultValue=false)]
-        public string Created { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
@@ -90,9 +58,7 @@ namespace Clever.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SectionsCreated {\n");
-            sb.Append("  Created: ").Append(Created).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ").Append(base.ToString().Replace("\n", "\n  ")).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -102,7 +68,7 @@ namespace Clever.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public override string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -110,45 +76,28 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SectionsCreated);
+            return this.Equals(input as SectionsCreated);
         }
 
         /// <summary>
         /// Returns true if SectionsCreated instances are equal
         /// </summary>
-        /// <param name="other">Instance of SectionsCreated to be compared</param>
+        /// <param name="input">Instance of SectionsCreated to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SectionsCreated other)
+        public bool Equals(SectionsCreated input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
-            return 
+            return base.Equals(input) && 
                 (
-                    this.Created == other.Created ||
-                    this.Created != null &&
-                    this.Created.Equals(other.Created)
-                ) && 
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-                ) && 
-                (
-                    this.Data == other.Data ||
-                    this.Data != null &&
-                    this.Data.Equals(other.Data)
+                    this.Data == input.Data ||
+                    (this.Data != null &&
+                    this.Data.Equals(input.Data))
                 );
         }
 
@@ -158,20 +107,12 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.Created != null)
-                    hash = hash * 59 + this.Created.GetHashCode();
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                int hashCode = base.GetHashCode();
                 if (this.Data != null)
-                    hash = hash * 59 + this.Data.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Data.GetHashCode();
+                return hashCode;
             }
         }
 
@@ -182,6 +123,7 @@ namespace Clever.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            foreach(var x in BaseValidate(validationContext)) yield return x;
             yield break;
         }
     }

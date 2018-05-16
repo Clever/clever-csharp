@@ -151,75 +151,73 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StudentContact);
+            return this.Equals(input as StudentContact);
         }
 
         /// <summary>
         /// Returns true if StudentContact instances are equal
         /// </summary>
-        /// <param name="other">Instance of StudentContact to be compared</param>
+        /// <param name="input">Instance of StudentContact to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StudentContact other)
+        public bool Equals(StudentContact input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.District == other.District ||
-                    this.District != null &&
-                    this.District.Equals(other.District)
+                    this.District == input.District ||
+                    (this.District != null &&
+                    this.District.Equals(input.District))
                 ) && 
                 (
-                    this.Email == other.Email ||
-                    this.Email != null &&
-                    this.Email.Equals(other.Email)
+                    this.Email == input.Email ||
+                    (this.Email != null &&
+                    this.Email.Equals(input.Email))
                 ) && 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Phone == other.Phone ||
-                    this.Phone != null &&
-                    this.Phone.Equals(other.Phone)
+                    this.Phone == input.Phone ||
+                    (this.Phone != null &&
+                    this.Phone.Equals(input.Phone))
                 ) && 
                 (
-                    this.PhoneType == other.PhoneType ||
-                    this.PhoneType != null &&
-                    this.PhoneType.Equals(other.PhoneType)
+                    this.PhoneType == input.PhoneType ||
+                    (this.PhoneType != null &&
+                    this.PhoneType.Equals(input.PhoneType))
                 ) && 
                 (
-                    this.Relationship == other.Relationship ||
-                    this.Relationship != null &&
-                    this.Relationship.Equals(other.Relationship)
+                    this.Relationship == input.Relationship ||
+                    (this.Relationship != null &&
+                    this.Relationship.Equals(input.Relationship))
                 ) && 
                 (
-                    this.SisId == other.SisId ||
-                    this.SisId != null &&
-                    this.SisId.Equals(other.SisId)
+                    this.SisId == input.SisId ||
+                    (this.SisId != null &&
+                    this.SisId.Equals(input.SisId))
                 ) && 
                 (
-                    this.Student == other.Student ||
-                    this.Student != null &&
-                    this.Student.Equals(other.Student)
+                    this.Student == input.Student ||
+                    (this.Student != null &&
+                    this.Student.Equals(input.Student))
                 ) && 
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 );
         }
 
@@ -229,32 +227,30 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.District != null)
-                    hash = hash * 59 + this.District.GetHashCode();
+                    hashCode = hashCode * 59 + this.District.GetHashCode();
                 if (this.Email != null)
-                    hash = hash * 59 + this.Email.GetHashCode();
+                    hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Phone != null)
-                    hash = hash * 59 + this.Phone.GetHashCode();
+                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
                 if (this.PhoneType != null)
-                    hash = hash * 59 + this.PhoneType.GetHashCode();
+                    hashCode = hashCode * 59 + this.PhoneType.GetHashCode();
                 if (this.Relationship != null)
-                    hash = hash * 59 + this.Relationship.GetHashCode();
+                    hashCode = hashCode * 59 + this.Relationship.GetHashCode();
                 if (this.SisId != null)
-                    hash = hash * 59 + this.SisId.GetHashCode();
+                    hashCode = hashCode * 59 + this.SisId.GetHashCode();
                 if (this.Student != null)
-                    hash = hash * 59 + this.Student.GetHashCode();
+                    hashCode = hashCode * 59 + this.Student.GetHashCode();
                 if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                return hashCode;
             }
         }
 

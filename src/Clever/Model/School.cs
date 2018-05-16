@@ -404,100 +404,98 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as School);
+            return this.Equals(input as School);
         }
 
         /// <summary>
         /// Returns true if School instances are equal
         /// </summary>
-        /// <param name="other">Instance of School to be compared</param>
+        /// <param name="input">Instance of School to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(School other)
+        public bool Equals(School input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Created == other.Created ||
-                    this.Created != null &&
-                    this.Created.Equals(other.Created)
+                    this.Created == input.Created ||
+                    (this.Created != null &&
+                    this.Created.Equals(input.Created))
                 ) && 
                 (
-                    this.District == other.District ||
-                    this.District != null &&
-                    this.District.Equals(other.District)
+                    this.District == input.District ||
+                    (this.District != null &&
+                    this.District.Equals(input.District))
                 ) && 
                 (
-                    this.HighGrade == other.HighGrade ||
-                    this.HighGrade != null &&
-                    this.HighGrade.Equals(other.HighGrade)
+                    this.HighGrade == input.HighGrade ||
+                    (this.HighGrade != null &&
+                    this.HighGrade.Equals(input.HighGrade))
                 ) && 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.LastModified == other.LastModified ||
-                    this.LastModified != null &&
-                    this.LastModified.Equals(other.LastModified)
+                    this.LastModified == input.LastModified ||
+                    (this.LastModified != null &&
+                    this.LastModified.Equals(input.LastModified))
                 ) && 
                 (
-                    this.Location == other.Location ||
-                    this.Location != null &&
-                    this.Location.Equals(other.Location)
+                    this.Location == input.Location ||
+                    (this.Location != null &&
+                    this.Location.Equals(input.Location))
                 ) && 
                 (
-                    this.LowGrade == other.LowGrade ||
-                    this.LowGrade != null &&
-                    this.LowGrade.Equals(other.LowGrade)
+                    this.LowGrade == input.LowGrade ||
+                    (this.LowGrade != null &&
+                    this.LowGrade.Equals(input.LowGrade))
                 ) && 
                 (
-                    this.MdrNumber == other.MdrNumber ||
-                    this.MdrNumber != null &&
-                    this.MdrNumber.Equals(other.MdrNumber)
+                    this.MdrNumber == input.MdrNumber ||
+                    (this.MdrNumber != null &&
+                    this.MdrNumber.Equals(input.MdrNumber))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.NcesId == other.NcesId ||
-                    this.NcesId != null &&
-                    this.NcesId.Equals(other.NcesId)
+                    this.NcesId == input.NcesId ||
+                    (this.NcesId != null &&
+                    this.NcesId.Equals(input.NcesId))
                 ) && 
                 (
-                    this.Phone == other.Phone ||
-                    this.Phone != null &&
-                    this.Phone.Equals(other.Phone)
+                    this.Phone == input.Phone ||
+                    (this.Phone != null &&
+                    this.Phone.Equals(input.Phone))
                 ) && 
                 (
-                    this.Principal == other.Principal ||
-                    this.Principal != null &&
-                    this.Principal.Equals(other.Principal)
+                    this.Principal == input.Principal ||
+                    (this.Principal != null &&
+                    this.Principal.Equals(input.Principal))
                 ) && 
                 (
-                    this.SchoolNumber == other.SchoolNumber ||
-                    this.SchoolNumber != null &&
-                    this.SchoolNumber.Equals(other.SchoolNumber)
+                    this.SchoolNumber == input.SchoolNumber ||
+                    (this.SchoolNumber != null &&
+                    this.SchoolNumber.Equals(input.SchoolNumber))
                 ) && 
                 (
-                    this.SisId == other.SisId ||
-                    this.SisId != null &&
-                    this.SisId.Equals(other.SisId)
+                    this.SisId == input.SisId ||
+                    (this.SisId != null &&
+                    this.SisId.Equals(input.SisId))
                 ) && 
                 (
-                    this.StateId == other.StateId ||
-                    this.StateId != null &&
-                    this.StateId.Equals(other.StateId)
+                    this.StateId == input.StateId ||
+                    (this.StateId != null &&
+                    this.StateId.Equals(input.StateId))
                 );
         }
 
@@ -507,42 +505,40 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Created != null)
-                    hash = hash * 59 + this.Created.GetHashCode();
+                    hashCode = hashCode * 59 + this.Created.GetHashCode();
                 if (this.District != null)
-                    hash = hash * 59 + this.District.GetHashCode();
+                    hashCode = hashCode * 59 + this.District.GetHashCode();
                 if (this.HighGrade != null)
-                    hash = hash * 59 + this.HighGrade.GetHashCode();
+                    hashCode = hashCode * 59 + this.HighGrade.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.LastModified != null)
-                    hash = hash * 59 + this.LastModified.GetHashCode();
+                    hashCode = hashCode * 59 + this.LastModified.GetHashCode();
                 if (this.Location != null)
-                    hash = hash * 59 + this.Location.GetHashCode();
+                    hashCode = hashCode * 59 + this.Location.GetHashCode();
                 if (this.LowGrade != null)
-                    hash = hash * 59 + this.LowGrade.GetHashCode();
+                    hashCode = hashCode * 59 + this.LowGrade.GetHashCode();
                 if (this.MdrNumber != null)
-                    hash = hash * 59 + this.MdrNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.MdrNumber.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.NcesId != null)
-                    hash = hash * 59 + this.NcesId.GetHashCode();
+                    hashCode = hashCode * 59 + this.NcesId.GetHashCode();
                 if (this.Phone != null)
-                    hash = hash * 59 + this.Phone.GetHashCode();
+                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
                 if (this.Principal != null)
-                    hash = hash * 59 + this.Principal.GetHashCode();
+                    hashCode = hashCode * 59 + this.Principal.GetHashCode();
                 if (this.SchoolNumber != null)
-                    hash = hash * 59 + this.SchoolNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.SchoolNumber.GetHashCode();
                 if (this.SisId != null)
-                    hash = hash * 59 + this.SisId.GetHashCode();
+                    hashCode = hashCode * 59 + this.SisId.GetHashCode();
                 if (this.StateId != null)
-                    hash = hash * 59 + this.StateId.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.StateId.GetHashCode();
+                return hashCode;
             }
         }
 

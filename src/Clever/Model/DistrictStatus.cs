@@ -165,65 +165,63 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DistrictStatus);
+            return this.Equals(input as DistrictStatus);
         }
 
         /// <summary>
         /// Returns true if DistrictStatus instances are equal
         /// </summary>
-        /// <param name="other">Instance of DistrictStatus to be compared</param>
+        /// <param name="input">Instance of DistrictStatus to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DistrictStatus other)
+        public bool Equals(DistrictStatus input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Error == other.Error ||
-                    this.Error != null &&
-                    this.Error.Equals(other.Error)
+                    this.Error == input.Error ||
+                    (this.Error != null &&
+                    this.Error.Equals(input.Error))
                 ) && 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.LastSync == other.LastSync ||
-                    this.LastSync != null &&
-                    this.LastSync.Equals(other.LastSync)
+                    this.LastSync == input.LastSync ||
+                    (this.LastSync != null &&
+                    this.LastSync.Equals(input.LastSync))
                 ) && 
                 (
-                    this.LaunchDate == other.LaunchDate ||
-                    this.LaunchDate != null &&
-                    this.LaunchDate.Equals(other.LaunchDate)
+                    this.LaunchDate == input.LaunchDate ||
+                    (this.LaunchDate != null &&
+                    this.LaunchDate.Equals(input.LaunchDate))
                 ) && 
                 (
-                    this.PauseEnd == other.PauseEnd ||
-                    this.PauseEnd != null &&
-                    this.PauseEnd.Equals(other.PauseEnd)
+                    this.PauseEnd == input.PauseEnd ||
+                    (this.PauseEnd != null &&
+                    this.PauseEnd.Equals(input.PauseEnd))
                 ) && 
                 (
-                    this.PauseStart == other.PauseStart ||
-                    this.PauseStart != null &&
-                    this.PauseStart.Equals(other.PauseStart)
+                    this.PauseStart == input.PauseStart ||
+                    (this.PauseStart != null &&
+                    this.PauseStart.Equals(input.PauseStart))
                 ) && 
                 (
-                    this.SisType == other.SisType ||
-                    this.SisType != null &&
-                    this.SisType.Equals(other.SisType)
+                    this.SisType == input.SisType ||
+                    (this.SisType != null &&
+                    this.SisType.Equals(input.SisType))
                 ) && 
                 (
-                    this.State == other.State ||
-                    this.State != null &&
-                    this.State.Equals(other.State)
+                    this.State == input.State ||
+                    (this.State != null &&
+                    this.State.Equals(input.State))
                 );
         }
 
@@ -233,28 +231,26 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Error != null)
-                    hash = hash * 59 + this.Error.GetHashCode();
+                    hashCode = hashCode * 59 + this.Error.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.LastSync != null)
-                    hash = hash * 59 + this.LastSync.GetHashCode();
+                    hashCode = hashCode * 59 + this.LastSync.GetHashCode();
                 if (this.LaunchDate != null)
-                    hash = hash * 59 + this.LaunchDate.GetHashCode();
+                    hashCode = hashCode * 59 + this.LaunchDate.GetHashCode();
                 if (this.PauseEnd != null)
-                    hash = hash * 59 + this.PauseEnd.GetHashCode();
+                    hashCode = hashCode * 59 + this.PauseEnd.GetHashCode();
                 if (this.PauseStart != null)
-                    hash = hash * 59 + this.PauseStart.GetHashCode();
+                    hashCode = hashCode * 59 + this.PauseStart.GetHashCode();
                 if (this.SisType != null)
-                    hash = hash * 59 + this.SisType.GetHashCode();
+                    hashCode = hashCode * 59 + this.SisType.GetHashCode();
                 if (this.State != null)
-                    hash = hash * 59 + this.State.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.State.GetHashCode();
+                return hashCode;
             }
         }
 

@@ -460,10 +460,10 @@ namespace Clever.Model
             Tamil,
             
             /// <summary>
-            /// Enum Telegu for "Telegu"
+            /// Enum Telugu for "Telugu"
             /// </summary>
-            [EnumMember(Value = "Telegu")]
-            Telegu,
+            [EnumMember(Value = "Telugu")]
+            Telugu,
             
             /// <summary>
             /// Enum Thai for "Thai"
@@ -805,145 +805,143 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Student);
+            return this.Equals(input as Student);
         }
 
         /// <summary>
         /// Returns true if Student instances are equal
         /// </summary>
-        /// <param name="other">Instance of Student to be compared</param>
+        /// <param name="input">Instance of Student to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Student other)
+        public bool Equals(Student input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.Created == other.Created ||
-                    this.Created != null &&
-                    this.Created.Equals(other.Created)
+                    this.Created == input.Created ||
+                    (this.Created != null &&
+                    this.Created.Equals(input.Created))
                 ) && 
                 (
-                    this.Credentials == other.Credentials ||
-                    this.Credentials != null &&
-                    this.Credentials.Equals(other.Credentials)
+                    this.Credentials == input.Credentials ||
+                    (this.Credentials != null &&
+                    this.Credentials.Equals(input.Credentials))
                 ) && 
                 (
-                    this.District == other.District ||
-                    this.District != null &&
-                    this.District.Equals(other.District)
+                    this.District == input.District ||
+                    (this.District != null &&
+                    this.District.Equals(input.District))
                 ) && 
                 (
-                    this.Dob == other.Dob ||
-                    this.Dob != null &&
-                    this.Dob.Equals(other.Dob)
+                    this.Dob == input.Dob ||
+                    (this.Dob != null &&
+                    this.Dob.Equals(input.Dob))
                 ) && 
                 (
-                    this.EllStatus == other.EllStatus ||
-                    this.EllStatus != null &&
-                    this.EllStatus.Equals(other.EllStatus)
+                    this.EllStatus == input.EllStatus ||
+                    (this.EllStatus != null &&
+                    this.EllStatus.Equals(input.EllStatus))
                 ) && 
                 (
-                    this.Email == other.Email ||
-                    this.Email != null &&
-                    this.Email.Equals(other.Email)
+                    this.Email == input.Email ||
+                    (this.Email != null &&
+                    this.Email.Equals(input.Email))
                 ) && 
                 (
-                    this.Gender == other.Gender ||
-                    this.Gender != null &&
-                    this.Gender.Equals(other.Gender)
+                    this.Gender == input.Gender ||
+                    (this.Gender != null &&
+                    this.Gender.Equals(input.Gender))
                 ) && 
                 (
-                    this.Grade == other.Grade ||
-                    this.Grade != null &&
-                    this.Grade.Equals(other.Grade)
+                    this.Grade == input.Grade ||
+                    (this.Grade != null &&
+                    this.Grade.Equals(input.Grade))
                 ) && 
                 (
-                    this.GraduationYear == other.GraduationYear ||
-                    this.GraduationYear != null &&
-                    this.GraduationYear.Equals(other.GraduationYear)
+                    this.GraduationYear == input.GraduationYear ||
+                    (this.GraduationYear != null &&
+                    this.GraduationYear.Equals(input.GraduationYear))
                 ) && 
                 (
-                    this.HispanicEthnicity == other.HispanicEthnicity ||
-                    this.HispanicEthnicity != null &&
-                    this.HispanicEthnicity.Equals(other.HispanicEthnicity)
+                    this.HispanicEthnicity == input.HispanicEthnicity ||
+                    (this.HispanicEthnicity != null &&
+                    this.HispanicEthnicity.Equals(input.HispanicEthnicity))
                 ) && 
                 (
-                    this.HomeLanguage == other.HomeLanguage ||
-                    this.HomeLanguage != null &&
-                    this.HomeLanguage.Equals(other.HomeLanguage)
+                    this.HomeLanguage == input.HomeLanguage ||
+                    (this.HomeLanguage != null &&
+                    this.HomeLanguage.Equals(input.HomeLanguage))
                 ) && 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.IepStatus == other.IepStatus ||
-                    this.IepStatus != null &&
-                    this.IepStatus.Equals(other.IepStatus)
+                    this.IepStatus == input.IepStatus ||
+                    (this.IepStatus != null &&
+                    this.IepStatus.Equals(input.IepStatus))
                 ) && 
                 (
-                    this.LastModified == other.LastModified ||
-                    this.LastModified != null &&
-                    this.LastModified.Equals(other.LastModified)
+                    this.LastModified == input.LastModified ||
+                    (this.LastModified != null &&
+                    this.LastModified.Equals(input.LastModified))
                 ) && 
                 (
-                    this.Location == other.Location ||
-                    this.Location != null &&
-                    this.Location.Equals(other.Location)
+                    this.Location == input.Location ||
+                    (this.Location != null &&
+                    this.Location.Equals(input.Location))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Race == other.Race ||
-                    this.Race != null &&
-                    this.Race.Equals(other.Race)
+                    this.Race == input.Race ||
+                    (this.Race != null &&
+                    this.Race.Equals(input.Race))
                 ) && 
                 (
-                    this.School == other.School ||
-                    this.School != null &&
-                    this.School.Equals(other.School)
+                    this.School == input.School ||
+                    (this.School != null &&
+                    this.School.Equals(input.School))
                 ) && 
                 (
-                    this.Schools == other.Schools ||
+                    this.Schools == input.Schools ||
                     this.Schools != null &&
-                    this.Schools.SequenceEqual(other.Schools)
+                    this.Schools.SequenceEqual(input.Schools)
                 ) && 
                 (
-                    this.SisId == other.SisId ||
-                    this.SisId != null &&
-                    this.SisId.Equals(other.SisId)
+                    this.SisId == input.SisId ||
+                    (this.SisId != null &&
+                    this.SisId.Equals(input.SisId))
                 ) && 
                 (
-                    this.StateId == other.StateId ||
-                    this.StateId != null &&
-                    this.StateId.Equals(other.StateId)
+                    this.StateId == input.StateId ||
+                    (this.StateId != null &&
+                    this.StateId.Equals(input.StateId))
                 ) && 
                 (
-                    this.StudentNumber == other.StudentNumber ||
-                    this.StudentNumber != null &&
-                    this.StudentNumber.Equals(other.StudentNumber)
+                    this.StudentNumber == input.StudentNumber ||
+                    (this.StudentNumber != null &&
+                    this.StudentNumber.Equals(input.StudentNumber))
                 ) && 
                 (
-                    this.UnweightedGpa == other.UnweightedGpa ||
-                    this.UnweightedGpa != null &&
-                    this.UnweightedGpa.Equals(other.UnweightedGpa)
+                    this.UnweightedGpa == input.UnweightedGpa ||
+                    (this.UnweightedGpa != null &&
+                    this.UnweightedGpa.Equals(input.UnweightedGpa))
                 ) && 
                 (
-                    this.WeightedGpa == other.WeightedGpa ||
-                    this.WeightedGpa != null &&
-                    this.WeightedGpa.Equals(other.WeightedGpa)
+                    this.WeightedGpa == input.WeightedGpa ||
+                    (this.WeightedGpa != null &&
+                    this.WeightedGpa.Equals(input.WeightedGpa))
                 );
         }
 
@@ -953,60 +951,58 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.Created != null)
-                    hash = hash * 59 + this.Created.GetHashCode();
+                    hashCode = hashCode * 59 + this.Created.GetHashCode();
                 if (this.Credentials != null)
-                    hash = hash * 59 + this.Credentials.GetHashCode();
+                    hashCode = hashCode * 59 + this.Credentials.GetHashCode();
                 if (this.District != null)
-                    hash = hash * 59 + this.District.GetHashCode();
+                    hashCode = hashCode * 59 + this.District.GetHashCode();
                 if (this.Dob != null)
-                    hash = hash * 59 + this.Dob.GetHashCode();
+                    hashCode = hashCode * 59 + this.Dob.GetHashCode();
                 if (this.EllStatus != null)
-                    hash = hash * 59 + this.EllStatus.GetHashCode();
+                    hashCode = hashCode * 59 + this.EllStatus.GetHashCode();
                 if (this.Email != null)
-                    hash = hash * 59 + this.Email.GetHashCode();
+                    hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.Gender != null)
-                    hash = hash * 59 + this.Gender.GetHashCode();
+                    hashCode = hashCode * 59 + this.Gender.GetHashCode();
                 if (this.Grade != null)
-                    hash = hash * 59 + this.Grade.GetHashCode();
+                    hashCode = hashCode * 59 + this.Grade.GetHashCode();
                 if (this.GraduationYear != null)
-                    hash = hash * 59 + this.GraduationYear.GetHashCode();
+                    hashCode = hashCode * 59 + this.GraduationYear.GetHashCode();
                 if (this.HispanicEthnicity != null)
-                    hash = hash * 59 + this.HispanicEthnicity.GetHashCode();
+                    hashCode = hashCode * 59 + this.HispanicEthnicity.GetHashCode();
                 if (this.HomeLanguage != null)
-                    hash = hash * 59 + this.HomeLanguage.GetHashCode();
+                    hashCode = hashCode * 59 + this.HomeLanguage.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.IepStatus != null)
-                    hash = hash * 59 + this.IepStatus.GetHashCode();
+                    hashCode = hashCode * 59 + this.IepStatus.GetHashCode();
                 if (this.LastModified != null)
-                    hash = hash * 59 + this.LastModified.GetHashCode();
+                    hashCode = hashCode * 59 + this.LastModified.GetHashCode();
                 if (this.Location != null)
-                    hash = hash * 59 + this.Location.GetHashCode();
+                    hashCode = hashCode * 59 + this.Location.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Race != null)
-                    hash = hash * 59 + this.Race.GetHashCode();
+                    hashCode = hashCode * 59 + this.Race.GetHashCode();
                 if (this.School != null)
-                    hash = hash * 59 + this.School.GetHashCode();
+                    hashCode = hashCode * 59 + this.School.GetHashCode();
                 if (this.Schools != null)
-                    hash = hash * 59 + this.Schools.GetHashCode();
+                    hashCode = hashCode * 59 + this.Schools.GetHashCode();
                 if (this.SisId != null)
-                    hash = hash * 59 + this.SisId.GetHashCode();
+                    hashCode = hashCode * 59 + this.SisId.GetHashCode();
                 if (this.StateId != null)
-                    hash = hash * 59 + this.StateId.GetHashCode();
+                    hashCode = hashCode * 59 + this.StateId.GetHashCode();
                 if (this.StudentNumber != null)
-                    hash = hash * 59 + this.StudentNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.StudentNumber.GetHashCode();
                 if (this.UnweightedGpa != null)
-                    hash = hash * 59 + this.UnweightedGpa.GetHashCode();
+                    hashCode = hashCode * 59 + this.UnweightedGpa.GetHashCode();
                 if (this.WeightedGpa != null)
-                    hash = hash * 59 + this.WeightedGpa.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.WeightedGpa.GetHashCode();
+                return hashCode;
             }
         }
 

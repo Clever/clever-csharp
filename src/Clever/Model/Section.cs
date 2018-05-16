@@ -401,115 +401,113 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Section);
+            return this.Equals(input as Section);
         }
 
         /// <summary>
         /// Returns true if Section instances are equal
         /// </summary>
-        /// <param name="other">Instance of Section to be compared</param>
+        /// <param name="input">Instance of Section to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Section other)
+        public bool Equals(Section input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.CourseDescription == other.CourseDescription ||
-                    this.CourseDescription != null &&
-                    this.CourseDescription.Equals(other.CourseDescription)
+                    this.CourseDescription == input.CourseDescription ||
+                    (this.CourseDescription != null &&
+                    this.CourseDescription.Equals(input.CourseDescription))
                 ) && 
                 (
-                    this.CourseName == other.CourseName ||
-                    this.CourseName != null &&
-                    this.CourseName.Equals(other.CourseName)
+                    this.CourseName == input.CourseName ||
+                    (this.CourseName != null &&
+                    this.CourseName.Equals(input.CourseName))
                 ) && 
                 (
-                    this.CourseNumber == other.CourseNumber ||
-                    this.CourseNumber != null &&
-                    this.CourseNumber.Equals(other.CourseNumber)
+                    this.CourseNumber == input.CourseNumber ||
+                    (this.CourseNumber != null &&
+                    this.CourseNumber.Equals(input.CourseNumber))
                 ) && 
                 (
-                    this.Created == other.Created ||
-                    this.Created != null &&
-                    this.Created.Equals(other.Created)
+                    this.Created == input.Created ||
+                    (this.Created != null &&
+                    this.Created.Equals(input.Created))
                 ) && 
                 (
-                    this.District == other.District ||
-                    this.District != null &&
-                    this.District.Equals(other.District)
+                    this.District == input.District ||
+                    (this.District != null &&
+                    this.District.Equals(input.District))
                 ) && 
                 (
-                    this.Grade == other.Grade ||
-                    this.Grade != null &&
-                    this.Grade.Equals(other.Grade)
+                    this.Grade == input.Grade ||
+                    (this.Grade != null &&
+                    this.Grade.Equals(input.Grade))
                 ) && 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
-                    this.LastModified == other.LastModified ||
-                    this.LastModified != null &&
-                    this.LastModified.Equals(other.LastModified)
+                    this.LastModified == input.LastModified ||
+                    (this.LastModified != null &&
+                    this.LastModified.Equals(input.LastModified))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.Period == other.Period ||
-                    this.Period != null &&
-                    this.Period.Equals(other.Period)
+                    this.Period == input.Period ||
+                    (this.Period != null &&
+                    this.Period.Equals(input.Period))
                 ) && 
                 (
-                    this.School == other.School ||
-                    this.School != null &&
-                    this.School.Equals(other.School)
+                    this.School == input.School ||
+                    (this.School != null &&
+                    this.School.Equals(input.School))
                 ) && 
                 (
-                    this.SectionNumber == other.SectionNumber ||
-                    this.SectionNumber != null &&
-                    this.SectionNumber.Equals(other.SectionNumber)
+                    this.SectionNumber == input.SectionNumber ||
+                    (this.SectionNumber != null &&
+                    this.SectionNumber.Equals(input.SectionNumber))
                 ) && 
                 (
-                    this.SisId == other.SisId ||
-                    this.SisId != null &&
-                    this.SisId.Equals(other.SisId)
+                    this.SisId == input.SisId ||
+                    (this.SisId != null &&
+                    this.SisId.Equals(input.SisId))
                 ) && 
                 (
-                    this.Students == other.Students ||
+                    this.Students == input.Students ||
                     this.Students != null &&
-                    this.Students.SequenceEqual(other.Students)
+                    this.Students.SequenceEqual(input.Students)
                 ) && 
                 (
-                    this.Subject == other.Subject ||
-                    this.Subject != null &&
-                    this.Subject.Equals(other.Subject)
+                    this.Subject == input.Subject ||
+                    (this.Subject != null &&
+                    this.Subject.Equals(input.Subject))
                 ) && 
                 (
-                    this.Teacher == other.Teacher ||
-                    this.Teacher != null &&
-                    this.Teacher.Equals(other.Teacher)
+                    this.Teacher == input.Teacher ||
+                    (this.Teacher != null &&
+                    this.Teacher.Equals(input.Teacher))
                 ) && 
                 (
-                    this.Teachers == other.Teachers ||
+                    this.Teachers == input.Teachers ||
                     this.Teachers != null &&
-                    this.Teachers.SequenceEqual(other.Teachers)
+                    this.Teachers.SequenceEqual(input.Teachers)
                 ) && 
                 (
-                    this.Term == other.Term ||
-                    this.Term != null &&
-                    this.Term.Equals(other.Term)
+                    this.Term == input.Term ||
+                    (this.Term != null &&
+                    this.Term.Equals(input.Term))
                 );
         }
 
@@ -519,48 +517,46 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.CourseDescription != null)
-                    hash = hash * 59 + this.CourseDescription.GetHashCode();
+                    hashCode = hashCode * 59 + this.CourseDescription.GetHashCode();
                 if (this.CourseName != null)
-                    hash = hash * 59 + this.CourseName.GetHashCode();
+                    hashCode = hashCode * 59 + this.CourseName.GetHashCode();
                 if (this.CourseNumber != null)
-                    hash = hash * 59 + this.CourseNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.CourseNumber.GetHashCode();
                 if (this.Created != null)
-                    hash = hash * 59 + this.Created.GetHashCode();
+                    hashCode = hashCode * 59 + this.Created.GetHashCode();
                 if (this.District != null)
-                    hash = hash * 59 + this.District.GetHashCode();
+                    hashCode = hashCode * 59 + this.District.GetHashCode();
                 if (this.Grade != null)
-                    hash = hash * 59 + this.Grade.GetHashCode();
+                    hashCode = hashCode * 59 + this.Grade.GetHashCode();
                 if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.LastModified != null)
-                    hash = hash * 59 + this.LastModified.GetHashCode();
+                    hashCode = hashCode * 59 + this.LastModified.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Period != null)
-                    hash = hash * 59 + this.Period.GetHashCode();
+                    hashCode = hashCode * 59 + this.Period.GetHashCode();
                 if (this.School != null)
-                    hash = hash * 59 + this.School.GetHashCode();
+                    hashCode = hashCode * 59 + this.School.GetHashCode();
                 if (this.SectionNumber != null)
-                    hash = hash * 59 + this.SectionNumber.GetHashCode();
+                    hashCode = hashCode * 59 + this.SectionNumber.GetHashCode();
                 if (this.SisId != null)
-                    hash = hash * 59 + this.SisId.GetHashCode();
+                    hashCode = hashCode * 59 + this.SisId.GetHashCode();
                 if (this.Students != null)
-                    hash = hash * 59 + this.Students.GetHashCode();
+                    hashCode = hashCode * 59 + this.Students.GetHashCode();
                 if (this.Subject != null)
-                    hash = hash * 59 + this.Subject.GetHashCode();
+                    hashCode = hashCode * 59 + this.Subject.GetHashCode();
                 if (this.Teacher != null)
-                    hash = hash * 59 + this.Teacher.GetHashCode();
+                    hashCode = hashCode * 59 + this.Teacher.GetHashCode();
                 if (this.Teachers != null)
-                    hash = hash * 59 + this.Teachers.GetHashCode();
+                    hashCode = hashCode * 59 + this.Teachers.GetHashCode();
                 if (this.Term != null)
-                    hash = hash * 59 + this.Term.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Term.GetHashCode();
+                return hashCode;
             }
         }
 
