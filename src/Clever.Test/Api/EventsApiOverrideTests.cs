@@ -28,7 +28,7 @@ namespace Clever.Test
         public void Init()
         {
             // Token for Demo App - Sandbox Events
-            Configuration.Default.AccessToken = "DEMO_EVENTS_TOKEN";
+            Configuration.Default.AccessToken = "TEST_TOKEN";
             instance = new EventsApi();
         }
 
