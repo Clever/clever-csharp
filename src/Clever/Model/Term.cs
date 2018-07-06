@@ -88,40 +88,38 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Term);
+            return this.Equals(input as Term);
         }
 
         /// <summary>
         /// Returns true if Term instances are equal
         /// </summary>
-        /// <param name="other">Instance of Term to be compared</param>
+        /// <param name="input">Instance of Term to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Term other)
+        public bool Equals(Term input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.EndDate == other.EndDate ||
-                    this.EndDate != null &&
-                    this.EndDate.Equals(other.EndDate)
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
                 ) && 
                 (
-                    this.StartDate == other.StartDate ||
-                    this.StartDate != null &&
-                    this.StartDate.Equals(other.StartDate)
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 );
         }
 
@@ -131,18 +129,16 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.EndDate != null)
-                    hash = hash * 59 + this.EndDate.GetHashCode();
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.StartDate != null)
-                    hash = hash * 59 + this.StartDate.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                return hashCode;
             }
         }
 

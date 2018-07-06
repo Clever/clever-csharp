@@ -70,30 +70,28 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SectionObject);
+            return this.Equals(input as SectionObject);
         }
 
         /// <summary>
         /// Returns true if SectionObject instances are equal
         /// </summary>
-        /// <param name="other">Instance of SectionObject to be compared</param>
+        /// <param name="input">Instance of SectionObject to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SectionObject other)
+        public bool Equals(SectionObject input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this._Object == other._Object ||
-                    this._Object != null &&
-                    this._Object.Equals(other._Object)
+                    this._Object == input._Object ||
+                    (this._Object != null &&
+                    this._Object.Equals(input._Object))
                 );
         }
 
@@ -103,14 +101,12 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this._Object != null)
-                    hash = hash * 59 + this._Object.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this._Object.GetHashCode();
+                return hashCode;
             }
         }
 

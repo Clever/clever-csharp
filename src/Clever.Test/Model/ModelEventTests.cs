@@ -19,6 +19,7 @@ using Clever.Api;
 using Clever.Model;
 using Clever.Client;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Clever.Test
 {
@@ -62,6 +63,196 @@ namespace Clever.Test
         {
             // TODO uncomment below to test "IsInstanceOfType" ModelEvent
             //Assert.IsInstanceOfType<ModelEvent> (instance, "variable 'instance' is a ModelEvent");
+        }
+
+        /// <summary>
+        /// Test deserialize a DistrictsUpdated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void DistrictsUpdatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a DistrictsUpdated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new DistrictsUpdated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a DistrictsDeleted from type ModelEvent
+        /// </summary>
+        [Test]
+        public void DistrictsDeletedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a DistrictsDeleted from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new DistrictsDeleted().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SchooladminsCreated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SchooladminsCreatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SchooladminsCreated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SchooladminsCreated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a TeachersUpdated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void TeachersUpdatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a TeachersUpdated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new TeachersUpdated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a TeachersDeleted from type ModelEvent
+        /// </summary>
+        [Test]
+        public void TeachersDeletedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a TeachersDeleted from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new TeachersDeleted().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a DistrictsCreated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void DistrictsCreatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a DistrictsCreated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new DistrictsCreated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SectionsCreated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SectionsCreatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SectionsCreated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SectionsCreated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a StudentcontactsDeleted from type ModelEvent
+        /// </summary>
+        [Test]
+        public void StudentcontactsDeletedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a StudentcontactsDeleted from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new StudentcontactsDeleted().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SchooladminsDeleted from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SchooladminsDeletedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SchooladminsDeleted from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SchooladminsDeleted().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a StudentsDeleted from type ModelEvent
+        /// </summary>
+        [Test]
+        public void StudentsDeletedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a StudentsDeleted from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new StudentsDeleted().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SchoolsCreated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SchoolsCreatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SchoolsCreated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SchoolsCreated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SectionsDeleted from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SectionsDeletedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SectionsDeleted from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SectionsDeleted().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SectionsUpdated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SectionsUpdatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SectionsUpdated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SectionsUpdated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SchoolsDeleted from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SchoolsDeletedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SchoolsDeleted from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SchoolsDeleted().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a TeachersCreated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void TeachersCreatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a TeachersCreated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new TeachersCreated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SchoolsUpdated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SchoolsUpdatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SchoolsUpdated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SchoolsUpdated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a StudentsCreated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void StudentsCreatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a StudentsCreated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new StudentsCreated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a SchooladminsUpdated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void SchooladminsUpdatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a SchooladminsUpdated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new SchooladminsUpdated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a StudentcontactsUpdated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void StudentcontactsUpdatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a StudentcontactsUpdated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new StudentcontactsUpdated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a StudentsUpdated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void StudentsUpdatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a StudentsUpdated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new StudentsUpdated().ToJson()));
+        }
+        /// <summary>
+        /// Test deserialize a StudentcontactsCreated from type ModelEvent
+        /// </summary>
+        [Test]
+        public void StudentcontactsCreatedDeserializeFromModelEventTest()
+        {
+            // TODO uncomment below to test deserialize a StudentcontactsCreated from type ModelEvent
+            //Assert.IsInstanceOf<ModelEvent>(JsonConvert.DeserializeObject<ModelEvent>(new StudentcontactsCreated().ToJson()));
         }
 
         /// <summary>

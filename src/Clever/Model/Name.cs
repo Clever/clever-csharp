@@ -88,40 +88,38 @@ namespace Clever.Model
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        /// <param name="obj">Object to be compared</param>
+        /// <param name="input">Object to be compared</param>
         /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Name);
+            return this.Equals(input as Name);
         }
 
         /// <summary>
         /// Returns true if Name instances are equal
         /// </summary>
-        /// <param name="other">Instance of Name to be compared</param>
+        /// <param name="input">Instance of Name to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Name other)
+        public bool Equals(Name input)
         {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
+            if (input == null)
                 return false;
 
             return 
                 (
-                    this.First == other.First ||
-                    this.First != null &&
-                    this.First.Equals(other.First)
+                    this.First == input.First ||
+                    (this.First != null &&
+                    this.First.Equals(input.First))
                 ) && 
                 (
-                    this.Last == other.Last ||
-                    this.Last != null &&
-                    this.Last.Equals(other.Last)
+                    this.Last == input.Last ||
+                    (this.Last != null &&
+                    this.Last.Equals(input.Last))
                 ) && 
                 (
-                    this.Middle == other.Middle ||
-                    this.Middle != null &&
-                    this.Middle.Equals(other.Middle)
+                    this.Middle == input.Middle ||
+                    (this.Middle != null &&
+                    this.Middle.Equals(input.Middle))
                 );
         }
 
@@ -131,18 +129,16 @@ namespace Clever.Model
         /// <returns>Hash code</returns>
         public override int GetHashCode()
         {
-            // credit: http://stackoverflow.com/a/263416/677735
             unchecked // Overflow is fine, just wrap
             {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
+                int hashCode = 41;
                 if (this.First != null)
-                    hash = hash * 59 + this.First.GetHashCode();
+                    hashCode = hashCode * 59 + this.First.GetHashCode();
                 if (this.Last != null)
-                    hash = hash * 59 + this.Last.GetHashCode();
+                    hashCode = hashCode * 59 + this.Last.GetHashCode();
                 if (this.Middle != null)
-                    hash = hash * 59 + this.Middle.GetHashCode();
-                return hash;
+                    hashCode = hashCode * 59 + this.Middle.GetHashCode();
+                return hashCode;
             }
         }
 

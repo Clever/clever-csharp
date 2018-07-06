@@ -19,6 +19,7 @@ using Clever.Api;
 using Clever.Model;
 using Clever.Client;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Clever.Test
 {
@@ -63,6 +64,7 @@ namespace Clever.Test
             // TODO uncomment below to test "IsInstanceOfType" DistrictObject
             //Assert.IsInstanceOfType<DistrictObject> (instance, "variable 'instance' is a DistrictObject");
         }
+
 
         /// <summary>
         /// Test the property '_Object'

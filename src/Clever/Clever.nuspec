@@ -6,7 +6,7 @@
         <title>Clever API client library</title>
 
         <!-- The package version number that is used when resolving dependencies -->
-        <version>$version$</version>
+        <version>1.2.1</version>
 
         <!-- Authors contain text that appears directly on the gallery -->
         <authors>Clever</authors>
