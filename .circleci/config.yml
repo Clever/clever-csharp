@@ -16,19 +16,11 @@ jobs:
         command: mkdir -p $CIRCLE_ARTIFACTS $CIRCLE_TEST_REPORTS
         name: Set up CircleCI artifacts directories
     - run:
-       command: |-
-         sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-         echo "deb http://download.mono-project.com/repo/ubuntu trusty main" | sudo tee /etc/apt/sources.list.d/mono-official.list
-         sudo apt-get update
-         sudo apt-get install mono-devel
-         make build
-       name: make build
-    - run: TERM=xterm-256color make test
-    - run:
         command: |-
-          cd /tmp/ && wget https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
+          sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+          echo "deb http://download.mono-project.com/repo/ubuntu trusty main" | sudo tee /etc/apt/sources.list.d/mono-official.list
           sudo apt-get update
-          sudo apt-get install python-dev
-          sudo pip install --upgrade awscli && aws --version
-          pip install --upgrade --user awscli
-        name: Install awscli for ECR publish
+          sudo apt-get install mono-devel
+          make build
+        name: make build
+    - run: TERM=xterm-256color make test
