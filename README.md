@@ -1,3 +1,6 @@
+# NOTICE
+This library is no longer maintained by Clever, but if you would like to generate your own using the swagger file, it is available at https://github.com/Clever/swagger-api.
+
 # Clever - the C# library for the Clever API
 
 ## Installation and API Documentation
