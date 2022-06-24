@@ -1,3 +1,7 @@
+# Notice
+
+This repo is no longer maintained by Clever. We provide the Swagger definitions at https://github.com/Clever/swagger-api.
+
 # Clever - the C# library for the Clever API
 
 ## Installation and API Documentation
